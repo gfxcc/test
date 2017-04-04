@@ -1,0 +1,14 @@
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+
+{
+  struct Container a;
+  struct Container b;
+
+    struct Container a;
+    struct Container b;
+}
+return <retval> = 0;
+

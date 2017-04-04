@@ -1,0 +1,2996 @@
+void f(const string&) (const struct string & str)
+{
+  struct __ostream_type & D.61051;
+
+  <D.61050>:
+  D.61051 = std::basic_ostream<char>::operator<< (&cout, str);
+  std::basic_ostream<char>::operator<< (D.61051, endl);
+  goto <D.61050>;
+}
+
+
+void start() ()
+{
+  struct __ostream_type & D.61053;
+  struct allocator D.51280;
+  char ary[100];
+  struct string s;
+  struct thread my_thread;
+
+  try
+    {
+      ary[0] = 72;
+      ary[1] = 0;
+      D.61053 = std::basic_ostream<char>::operator<< (&cout, &ary);
+      std::basic_ostream<char>::operator<< (D.61053, endl);
+      std::allocator<char>::allocator (&D.51280);
+      try
+        {
+          std::__cxx11::basic_string<char>::basic_string (&s, "H", &D.51280);
+        }
+      finally
+        {
+          try
+            {
+              std::allocator<char>::~allocator (&D.51280);
+            }
+          catch
+            {
+              std::__cxx11::basic_string<char>::~basic_string (&s);
+            }
+          D.51280 = {CLOBBER};
+        }
+      try
+        {
+          std::thread::thread<void (&)(const std::__cxx11::basic_string<char>&), char (&)[100]> (&my_thread, f, &ary);
+          try
+            {
+              std::thread::detach (&my_thread);
+            }
+          finally
+            {
+              std::thread::~thread (&my_thread);
+            }
+        }
+      finally
+        {
+          std::__cxx11::basic_string<char>::~basic_string (&s);
+        }
+    }
+  finally
+    {
+      ary = {CLOBBER};
+      s = {CLOBBER};
+      my_thread = {CLOBBER};
+    }
+}
+
+
+std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = char] (struct allocator * const this)
+{
+  void * D.61060;
+
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<char>::new_allocator (this);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<char>::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61060 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61060);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = char] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct basic_string * const this, const char * __s, const struct allocator & __a)
+{
+  char * D.61061;
+  struct _Alloc_hider * D.61062;
+  const char * iftmp.0;
+  long unsigned int D.61066;
+  struct _Alloc_hider * D.61068;
+
+  D.61061 = std::__cxx11::basic_string<char>::_M_local_data (this);
+  D.61062 = &this->_M_dataplus;
+  std::__cxx11::basic_string<char>::_Alloc_hider::_Alloc_hider (D.61062, D.61061, __a);
+  try
+    {
+      if (__s != 0B) goto <D.61064>; else goto <D.61065>;
+      <D.61064>:
+      D.61066 = std::char_traits<char>::length (__s);
+      iftmp.0 = __s + D.61066;
+      goto <D.61067>;
+      <D.61065>:
+      iftmp.0 = __s + 18446744073709551615;
+      <D.61067>:
+      std::__cxx11::basic_string<char>::_M_construct<const char*> (this, __s, iftmp.0);
+    }
+  catch
+    {
+      D.61068 = &this->_M_dataplus;
+      std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider (D.61068);
+    }
+}
+
+
+std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_Alloc_hider::_Alloc_hider(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::pointer = char*] (struct _Alloc_hider * const this, char * __dat, const struct allocator & __a)
+{
+  std::allocator<char>::allocator (this, __a);
+  try
+    {
+      this->_M_p = __dat;
+    }
+  catch
+    {
+      std::allocator<char>::~allocator (this);
+    }
+}
+
+
+static std::size_t std::char_traits<char>::length(const char_type*) (const char_type * __s)
+{
+  size_t D.61071;
+
+  D.61071 = __builtin_strlen (__s);
+  return D.61071;
+}
+
+
+void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_construct(_InIterator, _InIterator) [with _InIterator = const char*; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct basic_string * const this, const char * __beg, const char * __end)
+{
+  struct _Integral D.56434;
+  struct __false_type D.61073;
+  typedef struct _Integral _Integral;
+
+  try
+    {
+      std::__cxx11::basic_string<char>::_M_construct_aux<const char*> (this, __beg, __end, D.61073);
+    }
+  finally
+    {
+      D.56434 = {CLOBBER};
+    }
+}
+
+
+void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_construct_aux(_InIterator, _InIterator, std::__false_type) [with _InIterator = const char*; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct basic_string * const this, const char * __beg, const char * __end, struct __false_type D.56472)
+{
+  struct forward_iterator_tag D.57521;
+  struct _Tag D.57501;
+  struct _Tag * D.61075;
+  struct forward_iterator_tag D.61076;
+  typedef struct _Tag _Tag;
+
+  try
+    {
+      D.61075 = &D.57501;
+      std::__cxx11::basic_string<char>::_M_construct<const char*> (this, __beg, __end, D.61076);
+    }
+  finally
+    {
+      D.57501 = {CLOBBER};
+    }
+}
+
+
+void std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_M_construct(_InIterator, _InIterator, std::forward_iterator_tag) [with _FwdIterator = const char*; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct basic_string * const this, const char * __beg, const char * __end, struct forward_iterator_tag D.57515)
+{
+  bool retval.1;
+  bool iftmp.2;
+  bool D.61082;
+  long int D.61087;
+  long unsigned int __dnew.3;
+  long unsigned int __dnew.4;
+  char * D.61092;
+  long unsigned int __dnew.5;
+  char * D.61095;
+  void * D.61096;
+  long unsigned int __dnew.6;
+  size_type __dnew;
+
+  try
+    {
+      D.61082 = __gnu_cxx::__is_null_pointer<const char> (__beg);
+      if (D.61082 != 0) goto <D.61083>; else goto <D.61080>;
+      <D.61083>:
+      if (__beg != __end) goto <D.61084>; else goto <D.61080>;
+      <D.61084>:
+      iftmp.2 = 1;
+      goto <D.61081>;
+      <D.61080>:
+      iftmp.2 = 0;
+      <D.61081>:
+      retval.1 = iftmp.2;
+      if (retval.1 != 0) goto <D.61085>; else goto <D.61086>;
+      <D.61085>:
+      std::__throw_logic_error ("basic_string::_M_construct null not valid");
+      <D.61086>:
+      D.61087 = std::distance<const char*> (__beg, __end);
+      __dnew.3 = (long unsigned int) D.61087;
+      __dnew = __dnew.3;
+      __dnew.4 = __dnew;
+      if (__dnew.4 > 15) goto <D.61090>; else goto <D.61091>;
+      <D.61090>:
+      D.61092 = std::__cxx11::basic_string<char>::_M_create (this, &__dnew, 0);
+      std::__cxx11::basic_string<char>::_M_data (this, D.61092);
+      __dnew.5 = __dnew;
+      std::__cxx11::basic_string<char>::_M_capacity (this, __dnew.5);
+      goto <D.61094>;
+      <D.61091>:
+      <D.61094>:
+      try
+        {
+          D.61095 = std::__cxx11::basic_string<char>::_M_data (this);
+          std::__cxx11::basic_string<char>::_S_copy_chars (D.61095, __beg, __end);
+        }
+      catch
+        {
+          catch (NULL)
+            {
+              try
+                {
+                  D.61096 = __builtin_eh_pointer (0);
+                  __cxa_begin_catch (D.61096);
+                  std::__cxx11::basic_string<char>::_M_dispose (this);
+                  __cxa_rethrow ();
+                }
+              finally
+                {
+                  __cxa_end_catch ();
+                }
+            }
+        }
+      __dnew.6 = __dnew;
+      std::__cxx11::basic_string<char>::_M_set_length (this, __dnew.6);
+    }
+  finally
+    {
+      __dnew = {CLOBBER};
+    }
+}
+
+
+bool __gnu_cxx::__is_null_pointer(_Type*) [with _Type = const char] (const char * __ptr)
+{
+  bool D.61105;
+
+  D.61105 = __ptr == 0B;
+  return D.61105;
+}
+
+
+typename std::iterator_traits<_Iterator>::difference_type std::distance(_InputIterator, _InputIterator) [with _InputIterator = const char*; typename std::iterator_traits<_Iterator>::difference_type = long int] (const char * __first, const char * __last)
+{
+  difference_type D.61107;
+  struct iterator_category D.58373;
+  struct random_access_iterator_tag D.61108;
+  const char * __first.7;
+
+  std::__iterator_category<const char*> (&__first);
+  try
+    {
+      __first.7 = __first;
+      D.61107 = std::__distance<const char*> (__first.7, __last, D.61108);
+      return D.61107;
+    }
+  finally
+    {
+      D.58373 = {CLOBBER};
+    }
+}
+
+
+typename std::iterator_traits<_Iterator>::iterator_category std::__iterator_category(const _Iter&) [with _Iter = const char*; typename std::iterator_traits<_Iterator>::iterator_category = std::random_access_iterator_tag] (const char * const & D.58372)
+{
+  struct iterator_category D.61112;
+
+  return D.61112;
+}
+
+
+typename std::iterator_traits<_Iterator>::difference_type std::__distance(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const char*; typename std::iterator_traits<_Iterator>::difference_type = long int] (const char * __first, const char * __last, struct random_access_iterator_tag D.58377)
+{
+  difference_type D.61114;
+  long int __last.8;
+  long int __first.9;
+
+  __last.8 = (long int) __last;
+  __first.9 = (long int) __first;
+  D.61114 = __last.8 - __first.9;
+  return D.61114;
+}
+
+
+std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider() (struct _Alloc_hider * const this)
+{
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            std::allocator<char>::~allocator (this);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.51570>:
+}
+
+
+std::thread::thread(_Callable&&, _Args&& ...) [with _Callable = void (&)(const std::__cxx11::basic_string<char>&); _Args = {char (&)[100]}] (struct thread * const this, void (&<Ta581>) (const struct basic_string &) __f, char[100] & __args#0)
+{
+  struct id * D.61118;
+  struct __shared_base_type D.56303;
+  struct shared_ptr D.56304;
+  struct __type D.56305;
+  char[100] & D.61119;
+  void (&<Ta581>) (const struct basic_string &) D.61120;
+
+  D.61118 = &this->_M_id;
+  std::thread::id::id (D.61118);
+  D.61119 = std::forward<char (&)[100]> (__args#0);
+  D.61120 = std::forward<void (&)(const std::__cxx11::basic_string<char>&)> (__f);
+  D.56305 = std::__bind_simple<void (&)(const std::__cxx11::basic_string<char>&), char (&)[100]> (D.61120, D.61119); [return slot optimization]
+  try
+    {
+      D.56304 = std::thread::_M_make_routine<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (this, &D.56305); [return slot optimization]
+      try
+        {
+          std::shared_ptr<std::thread::_Impl_base>::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, void> (&D.56303, &D.56304);
+          try
+            {
+              std::thread::_M_start_thread (this, &D.56303, pthread_create);
+            }
+          finally
+            {
+              std::shared_ptr<std::thread::_Impl_base>::~shared_ptr (&D.56303);
+              D.56303 = {CLOBBER};
+            }
+        }
+      finally
+        {
+          std::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~shared_ptr (&D.56304);
+          D.56304 = {CLOBBER};
+        }
+    }
+  finally
+    {
+      D.56305 = {CLOBBER};
+    }
+}
+
+
+std::thread::id::id() (struct id * const this)
+{
+  try
+    {
+      {
+        this->_M_thread = 0;
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = char (&)[100]; typename std::remove_reference<_From>::type = char [100]] (char[100] & __t)
+{
+  char[100] & D.61124;
+
+  try
+    {
+      D.61124 = __t;
+      return D.61124;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = void (&)(const std::__cxx11::basic_string<char>&); typename std::remove_reference<_From>::type = void(const std::__cxx11::basic_string<char>&)] (void (&<Ta83f>) (const struct basic_string &) __t)
+{
+  void (&<Ta581>) (const struct basic_string &) D.61126;
+
+  try
+    {
+      D.61126 = __t;
+      return D.61126;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+typename std::_Bind_simple_helper<_Func, _BoundArgs>::__type std::__bind_simple(_Callable&&, _Args&& ...) [with _Callable = void (&)(const std::__cxx11::basic_string<char>&); _Args = {char (&)[100]}; typename std::_Bind_simple_helper<_Func, _BoundArgs>::__type = std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>] (void (&<Ta581>) (const struct basic_string &) __callable, char[100] & __args#0)
+{
+  char[100] & D.61129;
+  void (*<Ta588>) (const struct basic_string &) D.56477;
+  void (&<Ta581>) (const struct basic_string &) D.61130;
+  void (*<Ta588>) (const struct basic_string &) & D.61131;
+  typedef struct __helper_type __helper_type;
+  typedef struct __maybe_type __maybe_type;
+  typedef struct __result_type __result_type;
+
+  D.61129 = std::forward<char (&)[100]> (__args#0);
+  D.61130 = std::forward<void (&)(const std::__cxx11::basic_string<char>&)> (__callable);
+  D.56477 = D.61130;
+  try
+    {
+      D.61131 = std::_Maybe_wrap_member_pointer<void (*)(const std::__cxx11::basic_string<char>&)>::__do_wrap (&D.56477);
+      std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>::_Bind_simple<void (*)(const std::__cxx11::basic_string<char>&), char (&)[100]> (<retval>, D.61131, D.61129);
+      return <retval>;
+    }
+  finally
+    {
+      D.56477 = {CLOBBER};
+    }
+}
+
+
+static _Tp&& std::_Maybe_wrap_member_pointer<_Tp>::__do_wrap(_Tp&&) [with _Tp = void (*)(const std::__cxx11::basic_string<char>&)] (void (*<Ta588>) (const struct basic_string &) & __x)
+{
+  void (*<Ta588>) (const struct basic_string &) & D.61134;
+
+  D.61134 = __x;
+  return D.61134;
+}
+
+
+std::_Bind_simple<_Callable(_Args ...)>::_Bind_simple(_Tp&&, _Up&& ...) [with _Tp = void (*)(const std::__cxx11::basic_string<char>&); _Up = {char (&)[100]}; _Callable = void (*)(const std::__cxx11::basic_string<char>&); _Args = {char*}] (struct _Bind_simple * const this, void (*<Ta588>) (const struct basic_string &) & __f, char[100] & __args#0)
+{
+  char[100] & D.61136;
+  void (*<Ta588>) (const struct basic_string &) & D.61137;
+  struct tuple * D.61138;
+
+  D.61136 = std::forward<char (&)[100]> (__args#0);
+  D.61137 = std::forward<void (*)(const std::__cxx11::basic_string<char>&)> (__f);
+  D.61138 = &this->_M_bound;
+  std::tuple<void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::tuple<void (*)(const std::__cxx11::basic_string<char>&), char (&)[100], void> (D.61138, D.61137, D.61136);
+}
+
+
+constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = void (*)(const std::__cxx11::basic_string<char>&); typename std::remove_reference<_From>::type = void (*)(const std::__cxx11::basic_string<char>&)] (void (*type) (const struct basic_string &) & __t)
+{
+  void (*<Ta588>) (const struct basic_string &) & D.61139;
+
+  try
+    {
+      D.61139 = __t;
+      return D.61139;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::tuple<_T1, _T2>::tuple(_U1&&, _U2&&) [with _U1 = void (*)(const std::__cxx11::basic_string<char>&); _U2 = char (&)[100]; <template-parameter-2-3> = void; _T1 = void (*)(const std::__cxx11::basic_string<char>&); _T2 = char*] (struct tuple * const this, void (*<Ta588>) (const struct basic_string &) & __a1, char[100] & __a2)
+{
+  char[100] & D.61141;
+  void (*<Ta588>) (const struct basic_string &) & D.61142;
+  struct _Tuple_impl * D.61143;
+
+  D.61141 = std::forward<char (&)[100]> (__a2);
+  D.61142 = std::forward<void (*)(const std::__cxx11::basic_string<char>&)> (__a1);
+  D.61143 = &this->D.54435;
+  std::_Tuple_impl<0ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::_Tuple_impl<void (*)(const std::__cxx11::basic_string<char>&), char (&)[100], void> (D.61143, D.61142, D.61141);
+}
+
+
+constexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(_UHead&&, _UTail&& ...) [with _UHead = void (*)(const std::__cxx11::basic_string<char>&); _UTail = {char (&)[100]}; <template-parameter-2-3> = void; long unsigned int _Idx = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&); _Tail = {char*}] (struct _Tuple_impl * const this, void (*<Ta588>) (const struct basic_string &) & __head, char[100] & __tail#0)
+{
+  char * const D.57690;
+  char[100] & D.61144;
+  struct _Tuple_impl * D.61145;
+  void (*<Ta588>) (const struct basic_string &) & D.61146;
+  struct _Head_base * D.61147;
+
+  D.61144 = std::forward<char (&)[100]> (__tail#0);
+  D.57690 = D.61144;
+  try
+    {
+      D.61145 = &this->D.53762;
+      std::_Tuple_impl<1ul, char*>::_Tuple_impl (D.61145, &D.57690);
+    }
+  finally
+    {
+      D.57690 = {CLOBBER};
+    }
+  D.61146 = std::forward<void (*)(const std::__cxx11::basic_string<char>&)> (__head);
+  D.61147 = &this->D.53763;
+  std::_Head_base<0ul, void (*)(const std::__cxx11::basic_string<char>&), false>::_Head_base<void (*)(const std::__cxx11::basic_string<char>&)> (D.61147, D.61146);
+}
+
+
+constexpr std::_Tuple_impl<_Idx, _Head>::_Tuple_impl(const _Head&) [with long unsigned int _Idx = 1ul; _Head = char*] (struct _Tuple_impl * const this, char * const & __head)
+{
+  struct _Head_base * D.61148;
+
+  D.61148 = &this->D.53036;
+  std::_Head_base<1ul, char*, false>::_Head_base (D.61148, __head);
+}
+
+
+constexpr std::_Head_base<_Idx, _Head, false>::_Head_base(const _Head&) [with long unsigned int _Idx = 1ul; _Head = char*] (struct _Head_base * const this, char * const & __h)
+{
+  char * D.61149;
+
+  D.61149 = *__h;
+  this->_M_head_impl = D.61149;
+}
+
+
+constexpr std::_Head_base<_Idx, _Head, false>::_Head_base(_UHead&&) [with _UHead = void (*)(const std::__cxx11::basic_string<char>&); long unsigned int _Idx = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&)] (struct _Head_base * const this, void (*<Ta588>) (const struct basic_string &) & __h)
+{
+  void (*<Ta588>) (const struct basic_string &) & D.61150;
+  void (*<Ta588>) (const struct basic_string &) D.61151;
+
+  D.61150 = std::forward<void (*)(const std::__cxx11::basic_string<char>&)> (__h);
+  D.61151 = *D.61150;
+  this->_M_head_impl = D.61151;
+}
+
+
+std::shared_ptr<std::thread::_Impl<_Callable> > std::thread::_M_make_routine(_Callable&&) [with _Callable = std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>] (struct thread * const this, struct _Bind_simple & __f)
+{
+  struct _Bind_simple & D.61153;
+
+  D.61153 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__f);
+  *<retval> = std::make_shared<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (D.61153); [return slot optimization]
+  return <retval>;
+}
+
+
+constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>; typename std::remove_reference<_From>::type = std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>] (struct type & __t)
+{
+  struct _Bind_simple & D.61155;
+
+  try
+    {
+      D.61155 = __t;
+      return D.61155;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::shared_ptr<_Tp1> std::make_shared(_Args&& ...) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}] (struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.61158;
+  struct allocator D.57868;
+  typedef struct _Tp_nc _Tp_nc;
+
+  D.61158 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::allocator (&D.57868);
+  try
+    {
+      *<retval> = std::allocate_shared<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (&D.57868, D.61158); [return slot optimization]
+      return <retval>;
+    }
+  finally
+    {
+      std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~allocator (&D.57868);
+      D.57868 = {CLOBBER};
+    }
+}
+
+
+std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct allocator * const this)
+{
+  void * D.61162;
+
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::new_allocator (this);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61162 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61162);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::shared_ptr<_Tp1> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}] (const struct allocator & __a, struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.61164;
+  struct _Sp_make_shared_tag D.57993;
+  struct _Sp_make_shared_tag D.61165;
+
+  D.61164 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  try
+    {
+      std::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::shared_ptr<std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (<retval>, D.61165, __a, D.61164);
+      return <retval>;
+    }
+  finally
+    {
+      D.57993 = {CLOBBER};
+    }
+}
+
+
+std::shared_ptr<_Tp>::shared_ptr(std::_Sp_make_shared_tag, const _Alloc&, _Args&& ...) [with _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct shared_ptr * const this, struct _Sp_make_shared_tag __tag, const struct allocator & __a, struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.61169;
+  struct _Sp_make_shared_tag D.58411;
+  struct _Sp_make_shared_tag D.61170;
+  struct __shared_ptr * D.61171;
+  struct __shared_ptr * D.61172;
+
+  D.61169 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  D.61171 = &this->D.56160;
+  std::__shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, (__gnu_cxx::_Lock_policy)2u>::__shared_ptr<std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (D.61171, D.61170, __a, D.61169);
+  try
+    {
+
+    }
+  catch
+    {
+      D.61172 = &this->D.56160;
+      std::__shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, (__gnu_cxx::_Lock_policy)2u>::~__shared_ptr (D.61172);
+    }
+}
+
+
+std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_make_shared_tag, const _Alloc&, _Args&& ...) [with _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_ptr * const this, struct _Sp_make_shared_tag __tag, const struct allocator & __a, struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.61173;
+  struct _Sp_make_shared_tag D.58473;
+  struct _Sp_make_shared_tag D.61174;
+  struct __shared_count * D.61175;
+  struct __shared_count * D.61176;
+  struct _Impl * D.61177;
+  struct _Impl * D.61178;
+  struct __shared_count * D.61179;
+  struct __shared_count * D.61180;
+
+  this->_M_ptr = 0B;
+  D.61173 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  D.61175 = &this->_M_refcount;
+  std::__shared_count<>::__shared_count<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (D.61175, D.61174, 0B, __a, D.61173);
+  try
+    {
+      {
+        void * __p;
+
+        D.61176 = &this->_M_refcount;
+        __p = std::__shared_count<>::_M_get_deleter (D.61176, &_ZTISt19_Sp_make_shared_tag);
+        this->_M_ptr = __p;
+        D.61177 = this->_M_ptr;
+        D.61178 = this->_M_ptr;
+        D.61179 = &this->_M_refcount;
+        std::__enable_shared_from_this_helper<(__gnu_cxx::_Lock_policy)2u> (D.61179, D.61178, D.61177);
+      }
+    }
+  catch
+    {
+      D.61180 = &this->_M_refcount;
+      std::__shared_count<>::~__shared_count (D.61180);
+    }
+}
+
+
+std::__shared_count<_Lp>::__shared_count(std::_Sp_make_shared_tag, _Tp*, const _Alloc&, _Args&& ...) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_count * const this, struct _Sp_make_shared_tag D.58463, struct _Impl * D.58464, const struct allocator & __a, struct _Bind_simple & __args#0)
+{
+  struct allocator & D.59714;
+  struct allocator D.59715;
+  const struct type & D.61181;
+  struct _Bind_simple & D.59716;
+  void * D.59717;
+  void * D.59719;
+  struct _Sp_cp_type * iftmp.10;
+
+  this->_M_pi = 0B;
+  {
+    typedef struct _Sp_cp_type _Sp_cp_type;
+    struct __allocator_type __a2;
+    struct __allocated_ptr __guard;
+    struct _Sp_cp_type * __mem;
+
+    try
+      {
+        std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > (&__a2, __a);
+        try
+          {
+            __guard = std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > > (&__a2); [return slot optimization]
+            try
+              {
+                __mem = std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::get (&__guard);
+                D.61181 = std::move<const std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >&> (__a);
+                std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::allocator (&D.59715, D.61181);
+                try
+                  {
+                    D.59714 = &D.59715;
+                    D.59716 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+                    D.59717 = __mem;
+                    D.59719 = operator new (56, D.59717);
+                    if (D.59719 != 0B) goto <D.61183>; else goto <D.61184>;
+                    <D.61183>:
+                    try
+                      {
+                        std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Sp_counted_ptr_inplace<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (D.59719, D.59714, D.59716);
+                      }
+                    catch
+                      {
+                        operator delete (D.59719, D.59717);
+                      }
+                    iftmp.10 = D.59719;
+                    goto <D.61185>;
+                    <D.61184>:
+                    iftmp.10 = D.59719;
+                    <D.61185>:
+                  }
+                finally
+                  {
+                    std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~allocator (&D.59715);
+                    D.59715 = {CLOBBER};
+                  }
+                this->_M_pi = __mem;
+                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::operator= (&__guard, 0);
+              }
+            finally
+              {
+                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::~__allocated_ptr (&__guard);
+              }
+          }
+        finally
+          {
+            std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::~allocator (&__a2);
+          }
+      }
+    finally
+      {
+        __a2 = {CLOBBER};
+        __guard = {CLOBBER};
+      }
+  }
+}
+
+
+std::allocator< <template-parameter-1-1> >::allocator(const std::allocator<_Tp1>&) [with _Tp1 = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>] (struct allocator * const this, const struct allocator & D.58943)
+{
+  void * D.61192;
+
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::new_allocator (this);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61192 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61192);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__allocated_ptr<_Alloc> std::__allocate_guarded(_Alloc&) [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >] (struct allocator & __a)
+{
+  struct _Sp_counted_ptr_inplace * D.61194;
+
+  D.61194 = std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::allocate (__a, 1);
+  std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::__allocated_ptr (<retval>, __a, D.61194);
+  return <retval>;
+}
+
+
+static std::allocator_traits<_Alloc>::pointer std::allocator_traits<_Alloc>::allocate(_Alloc&, std::allocator_traits<_Alloc>::size_type) [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >; std::allocator_traits<_Alloc>::pointer = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>*; std::allocator_traits<_Alloc>::size_type = long unsigned int] (struct allocator & __a, size_type __n)
+{
+  struct _Sp_counted_ptr_inplace * D.61197;
+
+  D.61197 = __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::allocate (__a, __n, 0B);
+  return D.61197;
+}
+
+
+_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>; __gnu_cxx::new_allocator<_Tp>::pointer = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>*; __gnu_cxx::new_allocator<_Tp>::size_type = long unsigned int] (struct new_allocator * const this, size_type __n, const void * D.58816)
+{
+  bool retval.11;
+  long unsigned int D.61201;
+  struct _Sp_counted_ptr_inplace * D.61204;
+  long unsigned int D.61205;
+
+  D.61201 = __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::max_size (this);
+  retval.11 = D.61201 < __n;
+  if (retval.11 != 0) goto <D.61202>; else goto <D.61203>;
+  <D.61202>:
+  std::__throw_bad_alloc ();
+  <D.61203>:
+  D.61205 = __n * 56;
+  D.61204 = operator new (D.61205);
+  return D.61204;
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::max_size() const [with _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>; __gnu_cxx::new_allocator<_Tp>::size_type = long unsigned int] (const struct new_allocator * const this)
+{
+  size_type D.61208;
+
+  try
+    {
+      D.61208 = 329406144173384850;
+      return D.61208;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__allocated_ptr<_Alloc>::__allocated_ptr(_Alloc&, std::__allocated_ptr<_Alloc>::pointer) [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >; std::__allocated_ptr<_Alloc>::pointer = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>*] (struct __allocated_ptr * const this, struct allocator & __a, struct _Sp_counted_ptr_inplace * __ptr)
+{
+  try
+    {
+      {
+        this->_M_alloc = __a;
+        this->_M_ptr = __ptr;
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__allocated_ptr<_Alloc>::value_type* std::__allocated_ptr<_Alloc>::get() [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >; std::__allocated_ptr<_Alloc>::value_type = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>] (struct __allocated_ptr * const this)
+{
+  struct value_type * D.61210;
+  struct _Sp_counted_ptr_inplace * D.61211;
+
+  D.61211 = this->_M_ptr;
+  D.61210 = std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::_S_raw_ptr (this, D.61211);
+  return D.61210;
+}
+
+
+std::__allocated_ptr<_Alloc>::value_type* std::__allocated_ptr<_Alloc>::_S_raw_ptr(std::__allocated_ptr<_Alloc>::value_type*) [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >; std::__allocated_ptr<_Alloc>::value_type = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>] (struct __allocated_ptr * const this, struct value_type * __ptr)
+{
+  struct value_type * D.61213;
+
+  D.61213 = __ptr;
+  return D.61213;
+}
+
+
+constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = const std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >&; typename std::remove_reference< <template-parameter-1-1> >::type = const std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >] (const struct allocator & __t)
+{
+  const struct type & D.61215;
+
+  try
+    {
+      D.61215 = __t;
+      return D.61215;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::allocator< <template-parameter-1-1> >::allocator(const std::allocator< <template-parameter-1-1> >&) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct allocator * const this, const struct allocator & __a)
+{
+  void * D.61217;
+
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::new_allocator (this, __a);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61217 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61217);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator(const __gnu_cxx::new_allocator<_Tp>&) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct new_allocator * const this, const struct new_allocator & D.57793)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void* operator new(std::size_t, void*) (size_t D.11046, void * __p)
+{
+  void * D.61218;
+
+  try
+    {
+      D.61218 = __p;
+      return D.61218;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this, struct allocator & restrict __a, struct _Bind_simple & __args#0)
+{
+  struct _Sp_counted_base * D.61220;
+  int (*__vtbl_ptr_type) () * D.61221;
+  struct allocator D.60458;
+  struct _Impl * D.61222;
+  struct _Bind_simple & D.61223;
+  struct _Impl * D.61224;
+  struct _Impl * D.61225;
+  struct _Sp_counted_base * D.61226;
+
+  D.61220 = &this->D.58761;
+  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2u>::_Sp_counted_base (D.61220);
+  try
+    {
+      D.61221 = &_ZTVSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEPcEEEESaISG_ELN9__gnu_cxx12_Lock_policyE2EE + 16;
+      this->D.58761._vptr._Sp_counted_base = D.61221;
+      std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::allocator (&D.60458, __a);
+      try
+        {
+          D.61222 = &this->_M_impl;
+          std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Impl::_Impl (D.61222, &D.60458);
+        }
+      finally
+        {
+          std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~allocator (&D.60458);
+          D.60458 = {CLOBBER};
+        }
+      try
+        {
+          D.61223 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+          D.61224 = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_M_ptr (this);
+          std::allocator_traits<std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > >::construct<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (__a, D.61224, D.61223);
+        }
+      catch
+        {
+          D.61225 = &this->_M_impl;
+          std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Impl::~_Impl (D.61225);
+        }
+    }
+  catch
+    {
+      D.61226 = &this->D.58761;
+      std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2u>::~_Sp_counted_base (D.61226);
+    }
+}
+
+
+void* std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_M_get_deleter(const std::type_info&) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this, const struct type_info & __ti)
+{
+  bool retval.12;
+  void * D.61232;
+
+  try
+    {
+      retval.12 = std::type_info::operator== (__ti, &_ZTISt19_Sp_make_shared_tag);
+      if (retval.12 != 0) goto <D.61230>; else goto <D.61231>;
+      <D.61230>:
+      D.61232 = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_M_ptr (this);
+      return D.61232;
+      <D.61231>:
+      D.61232 = 0B;
+      return D.61232;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+bool std::type_info::operator==(const std::type_info&) const (const struct type_info * const this, const struct type_info & __arg)
+{
+  bool D.61234;
+  bool iftmp.13;
+  const char * D.61239;
+  const char * D.61240;
+  const char * D.61242;
+  char D.61243;
+  const char * D.61245;
+  const char * D.61246;
+  int D.61247;
+
+  try
+    {
+      D.61239 = this->__name;
+      D.61240 = __arg->__name;
+      if (D.61239 == D.61240) goto <D.61236>; else goto <D.61241>;
+      <D.61241>:
+      D.61242 = this->__name;
+      D.61243 = *D.61242;
+      if (D.61243 != 42) goto <D.61244>; else goto <D.61237>;
+      <D.61244>:
+      D.61245 = __arg->__name;
+      D.61246 = this->__name;
+      D.61247 = __builtin_strcmp (D.61246, D.61245);
+      if (D.61247 == 0) goto <D.61236>; else goto <D.61237>;
+      <D.61236>:
+      iftmp.13 = 1;
+      goto <D.61238>;
+      <D.61237>:
+      iftmp.13 = 0;
+      <D.61238>:
+      D.61234 = iftmp.13;
+      return D.61234;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_M_destroy() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this)
+{
+  struct _Impl * D.61249;
+  struct allocator & D.61250;
+
+  try
+    {
+      {
+        struct __allocator_type __a;
+        struct __allocated_ptr __guard_ptr;
+
+        try
+          {
+            D.61249 = &this->_M_impl;
+            D.61250 = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Impl::_M_alloc (D.61249);
+            std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > (&__a, D.61250);
+            try
+              {
+                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::__allocated_ptr (&__guard_ptr, &__a, this);
+                try
+                  {
+                    std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::~_Sp_counted_ptr_inplace (this);
+                  }
+                finally
+                  {
+                    std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::~__allocated_ptr (&__guard_ptr);
+                  }
+              }
+            finally
+              {
+                std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::~allocator (&__a);
+              }
+          }
+        finally
+          {
+            __a = {CLOBBER};
+            __guard_ptr = {CLOBBER};
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+_Alloc& std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Impl::_M_alloc() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Impl * const this)
+{
+  struct allocator & D.61251;
+
+  try
+    {
+      D.61251 = std::_Sp_ebo_helper<0, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, true>::_S_get (this);
+      return D.61251;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static _Tp& std::_Sp_ebo_helper<_Nm, _Tp, true>::_S_get(std::_Sp_ebo_helper<_Nm, _Tp, true>&) [with int _Nm = 0; _Tp = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >] (struct _Sp_ebo_helper & __eboh)
+{
+  struct allocator & D.61253;
+
+  D.61253 = __eboh;
+  return D.61253;
+}
+
+
+void std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_M_dispose() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this)
+{
+  struct _Impl * D.61255;
+  struct _Impl * D.61256;
+  struct allocator & D.61257;
+
+  try
+    {
+      D.61255 = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_M_ptr (this);
+      D.61256 = &this->_M_impl;
+      D.61257 = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Impl::_M_alloc (D.61256);
+      std::allocator_traits<std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > >::destroy<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > (D.61257, D.61255);
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static void std::allocator_traits<_Alloc>::destroy(_Alloc&, _Tp*) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >] (struct allocator & __a, struct _Impl * __p)
+{
+  std::allocator_traits<std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > >::_S_destroy<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > (__a, __p);
+}
+
+
+static std::_Require<typename std::allocator_traits<_Alloc>::__destroy_helper<_Tp>::type> std::allocator_traits<_Alloc>::_S_destroy(_Alloc&, _Tp*) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; std::_Require<typename std::allocator_traits<_Alloc>::__destroy_helper<_Tp>::type> = void] (struct allocator & __a, struct _Impl * __p)
+{
+  __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::destroy<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > (__a, __p);
+}
+
+
+void __gnu_cxx::new_allocator<_Tp>::destroy(_Up*) [with _Up = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct new_allocator * const this, struct _Impl * __p)
+{
+  int (*__vtbl_ptr_type) () * D.61258;
+  int (*__vtbl_ptr_type) () D.61259;
+
+  D.61258 = __p->D.56253._vptr._Impl_base;
+  D.61259 = *D.61258;
+  OBJ_TYPE_REF(D.61259;(struct _Impl)__p->0) (__p);
+}
+
+
+std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::~_Sp_counted_ptr_inplace() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this)
+{
+  std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::~_Sp_counted_ptr_inplace (this);
+  <D.60667>:
+  operator delete (this);
+}
+
+
+std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::~_Sp_counted_ptr_inplace() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61260;
+  struct _Impl * D.61261;
+  struct _Sp_counted_base * D.61262;
+  int D.61263;
+
+  try
+    {
+      {
+        D.61260 = &_ZTVSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEPcEEEESaISG_ELN9__gnu_cxx12_Lock_policyE2EE + 16;
+        this->D.58761._vptr._Sp_counted_base = D.61260;
+        try
+          {
+            try
+              {
+                try
+                  {
+
+                  }
+                finally
+                  {
+                    D.61261 = &this->_M_impl;
+                    std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Impl::~_Impl (D.61261);
+                  }
+              }
+            finally
+              {
+                D.61262 = &this->D.58761;
+                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2u>::~_Sp_counted_base (D.61262);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.60663>:
+      D.61263 = 0;
+      if (D.61263 != 0) goto <D.61264>; else goto <D.61265>;
+      <D.61264>:
+      operator delete (this);
+      goto <D.61266>;
+      <D.61265>:
+      <D.61266>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Sp_counted_base<_Lp>::_Sp_counted_base() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_base * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61267;
+
+  try
+    {
+      {
+        std::_Mutex_base<(__gnu_cxx::_Lock_policy)2u>::_Mutex_base (this);
+        D.61267 = &_ZTVSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE + 16;
+        this->_vptr._Sp_counted_base = D.61267;
+        this->_M_use_count = 1;
+        this->_M_weak_count = 1;
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::_Sp_counted_base<_Lp>::_M_destroy() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_base * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61270;
+  int (*__vtbl_ptr_type) () * D.61271;
+  int (*__vtbl_ptr_type) () D.61272;
+
+  try
+    {
+      if (this != 0B) goto <D.61268>; else goto <D.61269>;
+      <D.61268>:
+      D.61270 = this->_vptr._Sp_counted_base;
+      D.61271 = D.61270 + 8;
+      D.61272 = *D.61271;
+      OBJ_TYPE_REF(D.61272;(struct _Sp_counted_base)this->1) (this);
+      goto <D.61273>;
+      <D.61269>:
+      <D.61273>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::_Mutex_base<(__gnu_cxx::_Lock_policy)2u>::_Mutex_base() (struct _Mutex_base * const this)
+{
+
+}
+
+
+std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Impl::_Impl(_Alloc) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Impl * const this, struct allocator & restrict __a)
+{
+  struct __aligned_buffer * D.61274;
+
+  try
+    {
+      {
+        std::_Sp_ebo_helper<0, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, true>::_Sp_ebo_helper (this, __a);
+        try
+          {
+            D.61274 = &this->_M_storage;
+            __gnu_cxx::__aligned_buffer<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::__aligned_buffer (D.61274);
+          }
+        catch
+          {
+            std::_Sp_ebo_helper<0, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, true>::~_Sp_ebo_helper (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Sp_ebo_helper<_Nm, _Tp, true>::_Sp_ebo_helper(const _Tp&) [with int _Nm = 0; _Tp = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >] (struct _Sp_ebo_helper * const this, const struct allocator & __tp)
+{
+  std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::allocator (this, __tp);
+  try
+    {
+
+    }
+  catch
+    {
+      std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~allocator (this);
+    }
+}
+
+
+__gnu_cxx::__aligned_buffer<_Tp>::__aligned_buffer() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct __aligned_buffer * const this)
+{
+  std::aligned_storage<40ul, 8ul>::aligned_storage (this);
+}
+
+
+constexpr std::aligned_storage<40ul, 8ul>::aligned_storage() (struct aligned_storage * const this)
+{
+
+}
+
+
+_Tp* std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_M_ptr() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_ptr_inplace * const this)
+{
+  struct _Impl * D.61275;
+  struct __aligned_buffer * D.61276;
+
+  try
+    {
+      D.61276 = &this->_M_impl._M_storage;
+      D.61275 = __gnu_cxx::__aligned_buffer<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::_M_ptr (D.61276);
+      return D.61275;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+_Tp* __gnu_cxx::__aligned_buffer<_Tp>::_M_ptr() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct __aligned_buffer * const this)
+{
+  struct _Impl * D.61278;
+
+  try
+    {
+      D.61278 = __gnu_cxx::__aligned_buffer<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::_M_addr (this);
+      return D.61278;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void* __gnu_cxx::__aligned_buffer<_Tp>::_M_addr() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct __aligned_buffer * const this)
+{
+  void * D.61280;
+
+  try
+    {
+      D.61280 = &this->_M_storage;
+      return D.61280;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) std::allocator_traits<_Alloc>::construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; decltype (_S_construct(__a, __p, (forward<_Args>)(std::allocator_traits::construct::__args)...)) = <type error>] (struct allocator & __a, struct _Impl * __p, struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.61282;
+
+  D.61282 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  std::allocator_traits<std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > > >::_S_construct<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (__a, __p, D.61282);
+}
+
+
+static std::_Require<typename std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::type> std::allocator_traits<_Alloc>::_S_construct(_Alloc&, _Tp*, _Args&& ...) [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; _Alloc = std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >; std::_Require<typename std::allocator_traits<_Alloc>::__construct_helper<_Tp, _Args>::type> = void] (struct allocator & __a, struct _Impl * __p, struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.61286;
+
+  D.61286 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::construct<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)> > (__a, __p, D.61286);
+}
+
+
+void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; _Args = {std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)>}; _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct new_allocator * const this, struct _Impl * __p, struct _Bind_simple & __args#0)
+{
+  struct _Bind_simple & D.60578;
+  void * D.60531;
+  void * D.60532;
+  struct _Impl * iftmp.14;
+
+  D.60578 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__args#0);
+  D.60531 = __p;
+  D.60532 = operator new (40, D.60531);
+  if (D.60532 != 0B) goto <D.61288>; else goto <D.61289>;
+  <D.61288>:
+  try
+    {
+      std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >::_Impl (D.60532, D.60578);
+    }
+  catch
+    {
+      operator delete (D.60532, D.60531);
+    }
+  iftmp.14 = D.60532;
+  goto <D.61290>;
+  <D.61289>:
+  iftmp.14 = D.60532;
+  <D.61290>:
+}
+
+
+std::thread::_Impl<_Callable>::_Impl(_Callable&&) [with _Callable = std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>] (struct _Impl * const this, struct _Bind_simple & __f)
+{
+  struct _Impl_base * D.61291;
+  int (*__vtbl_ptr_type) () * D.61292;
+  struct _Bind_simple & D.61293;
+  struct _Bind_simple * D.61294;
+  struct _Impl_base * D.61295;
+
+  D.61291 = &this->D.56253;
+  std::thread::_Impl_base::_Impl_base (D.61291);
+  try
+    {
+      D.61292 = &_ZTVNSt6thread5_ImplISt12_Bind_simpleIFPFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEPcEEEE + 16;
+      this->D.56253._vptr._Impl_base = D.61292;
+      D.61293 = std::forward<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > (__f);
+      D.61294 = &this->_M_func;
+      std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>::_Bind_simple (D.61294, D.61293);
+    }
+  catch
+    {
+      D.61295 = &this->D.56253;
+      std::thread::_Impl_base::~_Impl_base (D.61295);
+    }
+}
+
+
+void std::thread::_Impl<_Callable>::_M_run() [with _Callable = std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>] (struct _Impl * const this)
+{
+  struct _Bind_simple * D.61296;
+
+  D.61296 = &this->_M_func;
+  std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>::operator() (D.61296);
+}
+
+
+std::_Bind_simple<_Callable(_Args ...)>::result_type std::_Bind_simple<_Callable(_Args ...)>::operator()() [with _Callable = void (*)(const std::__cxx11::basic_string<char>&); _Args = {char*}; std::_Bind_simple<_Callable(_Args ...)>::result_type = void] (struct _Bind_simple * const this)
+{
+  struct _Indices D.60747;
+  struct _Index_tuple D.61297;
+  typedef struct _Indices _Indices;
+
+  try
+    {
+      std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)>::_M_invoke<0ul> (this, D.61297);
+    }
+  finally
+    {
+      D.60747 = {CLOBBER};
+    }
+  return;
+}
+
+
+typename std::result_of<_Functor(_ArgTypes ...)>::type std::_Bind_simple<_Callable(_Args ...)>::_M_invoke(std::_Index_tuple<_Indices ...>) [with long unsigned int ..._Indices = {0ul}; _Callable = void (*)(const std::__cxx11::basic_string<char>&); _Args = {char*}; typename std::result_of<_Functor(_ArgTypes ...)>::type = void] (struct _Bind_simple * const this, struct _Index_tuple D.60759)
+{
+  struct tuple * D.61300;
+  void (*__tuple_element_t) (const struct basic_string &) & D.61301;
+  void (*<Ta588>) (const struct basic_string &) & D.61302;
+  void (*<Ta588>) (const struct basic_string &) D.61303;
+  const struct basic_string D.60813;
+  struct allocator D.60812;
+  struct tuple * D.61304;
+  char * & D.61305;
+  char * & D.61306;
+  char * D.61307;
+
+  D.61300 = &this->_M_bound;
+  D.61301 = std::get<0ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*> (D.61300);
+  D.61302 = std::forward<void (*)(const std::__cxx11::basic_string<char>&)> (D.61301);
+  D.61303 = *D.61302;
+  std::allocator<char>::allocator (&D.60812);
+  try
+    {
+      D.61304 = &this->_M_bound;
+      D.61305 = std::get<1ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*> (D.61304);
+      D.61306 = std::forward<char*> (D.61305);
+      D.61307 = *D.61306;
+      std::__cxx11::basic_string<char>::basic_string (&D.60813, D.61307, &D.60812);
+      try
+        {
+          D.61303 (&D.60813);
+        }
+      finally
+        {
+          std::__cxx11::basic_string<char>::~basic_string (&D.60813);
+          D.60813 = {CLOBBER};
+        }
+    }
+  finally
+    {
+      std::allocator<char>::~allocator (&D.60812);
+      D.60812 = {CLOBBER};
+    }
+  return;
+}
+
+
+constexpr std::__tuple_element_t<__i, std::tuple<_Elements ...> >& std::get(std::tuple<_Elements ...>&) [with long unsigned int __i = 0ul; _Elements = {void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*}; std::__tuple_element_t<__i, std::tuple<_Elements ...> > = void (*)(const std::__cxx11::basic_string<char>&)] (struct tuple & __t)
+{
+  void (*__tuple_element_t) (const struct basic_string &) & D.61311;
+  struct _Tuple_impl * D.61312;
+
+  try
+    {
+      D.61312 = &__t->D.54435;
+      D.61311 = std::__get_helper<0ul, void (*)(const std::__cxx11::basic_string<char>&), char*> (D.61312);
+      return D.61311;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr _Head& std::__get_helper(std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int __i = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&); _Tail = {char*}] (struct _Tuple_impl & __t)
+{
+  void (*<Ta588>) (const struct basic_string &) & D.61314;
+
+  try
+    {
+      D.61314 = std::_Tuple_impl<0ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::_M_head (__t);
+      return D.61314;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static constexpr _Head& std::_Tuple_impl<_Idx, _Head, _Tail ...>::_M_head(std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int _Idx = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&); _Tail = {char*}] (struct _Tuple_impl & __t)
+{
+  void (*<Ta588>) (const struct basic_string &) & D.61316;
+  struct _Head_base * D.61317;
+
+  try
+    {
+      D.61317 = &__t->D.53763;
+      D.61316 = std::_Head_base<0ul, void (*)(const std::__cxx11::basic_string<char>&), false>::_M_head (D.61317);
+      return D.61316;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static constexpr _Head& std::_Head_base<_Idx, _Head, false>::_M_head(std::_Head_base<_Idx, _Head, false>&) [with long unsigned int _Idx = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&)] (struct _Head_base & __b)
+{
+  void (*<Ta588>) (const struct basic_string &) & D.61319;
+
+  try
+    {
+      D.61319 = &__b->_M_head_impl;
+      return D.61319;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::__tuple_element_t<__i, std::tuple<_Elements ...> >& std::get(std::tuple<_Elements ...>&) [with long unsigned int __i = 1ul; _Elements = {void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*}; std::__tuple_element_t<__i, std::tuple<_Elements ...> > = char*] (struct tuple & __t)
+{
+  char * & D.61321;
+  struct _Tuple_impl * D.61322;
+
+  try
+    {
+      D.61322 = &__t->D.54435.D.53762;
+      D.61321 = std::__get_helper<1ul, char*> (D.61322);
+      return D.61321;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr _Head& std::__get_helper(std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int __i = 1ul; _Head = char*; _Tail = {}] (struct _Tuple_impl & __t)
+{
+  char * & D.61324;
+
+  try
+    {
+      D.61324 = std::_Tuple_impl<1ul, char*>::_M_head (__t);
+      return D.61324;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static constexpr _Head& std::_Tuple_impl<_Idx, _Head>::_M_head(std::_Tuple_impl<_Idx, _Head>&) [with long unsigned int _Idx = 1ul; _Head = char*] (struct _Tuple_impl & __t)
+{
+  char * & D.61326;
+  struct _Head_base * D.61327;
+
+  try
+    {
+      D.61327 = &__t->D.53036;
+      D.61326 = std::_Head_base<1ul, char*, false>::_M_head (D.61327);
+      return D.61326;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static constexpr _Head& std::_Head_base<_Idx, _Head, false>::_M_head(std::_Head_base<_Idx, _Head, false>&) [with long unsigned int _Idx = 1ul; _Head = char*] (struct _Head_base & __b)
+{
+  char * & D.61329;
+
+  try
+    {
+      D.61329 = &__b->_M_head_impl;
+      return D.61329;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr _Tp&& std::forward(typename std::remove_reference<_From>::type&) [with _Tp = char*; typename std::remove_reference<_From>::type = char*] (char * & __t)
+{
+  char * & D.61331;
+
+  try
+    {
+      D.61331 = __t;
+      return D.61331;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+virtual std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >::~_Impl() (struct _Impl * const this)
+{
+  std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >::~_Impl (this);
+  <D.60601>:
+  operator delete (this);
+}
+
+
+std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >::~_Impl() (struct _Impl * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61333;
+  struct _Impl_base * D.61334;
+  int D.61335;
+
+  {
+    D.61333 = &_ZTVNSt6thread5_ImplISt12_Bind_simpleIFPFvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEPcEEEE + 16;
+    this->D.56253._vptr._Impl_base = D.61333;
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.61334 = &this->D.56253;
+            std::thread::_Impl_base::~_Impl_base (D.61334);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.60597>:
+  D.61335 = 0;
+  if (D.61335 != 0) goto <D.61336>; else goto <D.61337>;
+  <D.61336>:
+  operator delete (this);
+  goto <D.61338>;
+  <D.61337>:
+  <D.61338>:
+}
+
+
+std::thread::_Impl_base::~_Impl_base() (struct _Impl_base * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61339;
+  struct __shared_base_type * D.61340;
+  int D.61341;
+
+  {
+    D.61339 = &_ZTVNSt6thread10_Impl_baseE + 16;
+    this->_vptr._Impl_base = D.61339;
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.61340 = &this->_M_this_ptr;
+            std::shared_ptr<std::thread::_Impl_base>::~shared_ptr (D.61340);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.51176>:
+  D.61341 = 0;
+  if (D.61341 != 0) goto <D.61342>; else goto <D.61343>;
+  <D.61342>:
+  operator delete (this);
+  goto <D.61344>;
+  <D.61343>:
+  <D.61344>:
+}
+
+
+virtual std::thread::_Impl_base::~_Impl_base() (struct _Impl_base * const this)
+{
+  std::thread::_Impl_base::~_Impl_base (this);
+  <D.51180>:
+  operator delete (this);
+}
+
+
+constexpr std::thread::_Impl_base::_Impl_base() (struct _Impl_base * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61345;
+  struct __shared_base_type * D.61346;
+  struct __shared_base_type * D.61347;
+
+  D.61345 = &_ZTVNSt6thread10_Impl_baseE + 16;
+  this->_vptr._Impl_base = D.61345;
+  D.61346 = &this->_M_this_ptr;
+  std::shared_ptr<std::thread::_Impl_base>::shared_ptr (D.61346);
+  try
+    {
+
+    }
+  catch
+    {
+      D.61347 = &this->_M_this_ptr;
+      std::shared_ptr<std::thread::_Impl_base>::~shared_ptr (D.61347);
+    }
+}
+
+
+constexpr std::shared_ptr<_Tp>::shared_ptr() [with _Tp = std::thread::_Impl_base] (struct shared_ptr * const this)
+{
+  struct __shared_ptr * D.61348;
+  struct __shared_ptr * D.61349;
+
+  try
+    {
+      {
+        D.61348 = &this->D.50595;
+        std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2u>::__shared_ptr (D.61348);
+        try
+          {
+
+          }
+        catch
+          {
+            D.61349 = &this->D.50595;
+            std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2u>::~__shared_ptr (D.61349);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::__shared_ptr<_Tp, _Lp>::__shared_ptr() [with _Tp = std::thread::_Impl_base; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_ptr * const this)
+{
+  struct __shared_count * D.61350;
+  struct __shared_count * D.61351;
+
+  try
+    {
+      {
+        this->_M_ptr = 0B;
+        D.61350 = &this->_M_refcount;
+        std::__shared_count<>::__shared_count (D.61350);
+        try
+          {
+
+          }
+        catch
+          {
+            D.61351 = &this->_M_refcount;
+            std::__shared_count<>::~__shared_count (D.61351);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::__shared_count<_Lp>::__shared_count() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_count * const this)
+{
+  try
+    {
+      {
+        this->_M_pi = 0B;
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Bind_simple<_Callable(_Args ...)>::_Bind_simple(std::_Bind_simple<_Callable(_Args ...)>&&) [with _Callable = void (*)(const std::__cxx11::basic_string<char>&); _Args = {char*}] (struct _Bind_simple * const this, struct _Bind_simple & D.54811)
+{
+  struct tuple * D.61352;
+  struct tuple * D.61353;
+
+  D.61352 = &D.54811->_M_bound;
+  D.61353 = &this->_M_bound;
+  std::tuple<void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::tuple (D.61353, D.61352);
+}
+
+
+constexpr std::tuple<_T1, _T2>::tuple(std::tuple<_T1, _T2>&&) [with _T1 = void (*)(const std::__cxx11::basic_string<char>&); _T2 = char*] (struct tuple * const this, struct tuple & D.54406)
+{
+  struct _Tuple_impl * D.61354;
+  struct _Tuple_impl * D.61355;
+
+  D.61354 = &D.54406->D.54435;
+  D.61355 = &this->D.54435;
+  std::_Tuple_impl<0ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::_Tuple_impl (D.61355, D.61354);
+}
+
+
+constexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Tuple_impl(std::_Tuple_impl<_Idx, _Head, _Tail ...>&&) [with long unsigned int _Idx = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&); _Tail = {char*}] (struct _Tuple_impl * const this, struct _Tuple_impl & __in)
+{
+  struct _Inherited & D.61356;
+  struct type & D.61357;
+  struct _Tuple_impl * D.61358;
+  void (*<Ta588>) (const struct basic_string &) & D.61359;
+  void (*<Ta588>) (const struct basic_string &) & D.61360;
+  struct _Head_base * D.61361;
+
+  try
+    {
+      {
+        D.61356 = std::_Tuple_impl<0ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::_M_tail (__in);
+        D.61357 = std::move<std::_Tuple_impl<1ul, char*>&> (D.61356);
+        D.61358 = &this->D.53762;
+        std::_Tuple_impl<1ul, char*>::_Tuple_impl (D.61358, D.61357);
+        D.61359 = std::_Tuple_impl<0ul, void (*)(const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&), char*>::_M_head (__in);
+        D.61360 = std::forward<void (*)(const std::__cxx11::basic_string<char>&)> (D.61359);
+        D.61361 = &this->D.53763;
+        std::_Head_base<0ul, void (*)(const std::__cxx11::basic_string<char>&), false>::_Head_base<void (*)(const std::__cxx11::basic_string<char>&)> (D.61361, D.61360);
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static constexpr std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Inherited& std::_Tuple_impl<_Idx, _Head, _Tail ...>::_M_tail(std::_Tuple_impl<_Idx, _Head, _Tail ...>&) [with long unsigned int _Idx = 0ul; _Head = void (*)(const std::__cxx11::basic_string<char>&); _Tail = {char*}; std::_Tuple_impl<_Idx, _Head, _Tail ...>::_Inherited = std::_Tuple_impl<1ul, char*>] (struct _Tuple_impl & __t)
+{
+  struct _Inherited & D.61362;
+
+  try
+    {
+      D.61362 = &__t->D.53762;
+      return D.61362;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = std::_Tuple_impl<1ul, char*>&; typename std::remove_reference< <template-parameter-1-1> >::type = std::_Tuple_impl<1ul, char*>] (struct _Tuple_impl & __t)
+{
+  struct type & D.61364;
+
+  try
+    {
+      D.61364 = __t;
+      return D.61364;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::_Tuple_impl<_Idx, _Head>::_Tuple_impl(std::_Tuple_impl<_Idx, _Head>&&) [with long unsigned int _Idx = 1ul; _Head = char*] (struct _Tuple_impl * const this, struct _Tuple_impl & __in)
+{
+  char * & D.61366;
+  char * & D.61367;
+  struct _Head_base * D.61368;
+
+  try
+    {
+      {
+        D.61366 = std::_Tuple_impl<1ul, char*>::_M_head (__in);
+        D.61367 = std::forward<char*> (D.61366);
+        D.61368 = &this->D.53036;
+        std::_Head_base<1ul, char*, false>::_Head_base<char*> (D.61368, D.61367);
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::_Head_base<_Idx, _Head, false>::_Head_base(_UHead&&) [with _UHead = char*; long unsigned int _Idx = 1ul; _Head = char*] (struct _Head_base * const this, char * & __h)
+{
+  char * & D.61369;
+  char * D.61370;
+
+  D.61369 = std::forward<char*> (__h);
+  D.61370 = *D.61369;
+  this->_M_head_impl = D.61370;
+}
+
+
+std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>::_Impl::~_Impl() (struct _Impl * const this)
+{
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            std::_Sp_ebo_helper<0, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, true>::~_Sp_ebo_helper (this);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.59790>:
+}
+
+
+std::_Sp_ebo_helper<0, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, true>::~_Sp_ebo_helper() (struct _Sp_ebo_helper * const this)
+{
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~allocator (this);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.59785>:
+}
+
+
+std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct allocator * const this)
+{
+  void * D.61371;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+
+              }
+            finally
+              {
+                __gnu_cxx::new_allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~new_allocator (this);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.57989>:
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61371 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61371);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.58390>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Sp_counted_base<_Lp>::~_Sp_counted_base() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_base * const this)
+{
+  int (*__vtbl_ptr_type) () * D.61372;
+  int D.61373;
+
+  try
+    {
+      {
+        D.61372 = &_ZTVSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE + 16;
+        this->_vptr._Sp_counted_base = D.61372;
+        try
+          {
+
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.57963>:
+      D.61373 = 0;
+      if (D.61373 != 0) goto <D.61374>; else goto <D.61375>;
+      <D.61374>:
+      operator delete (this);
+      goto <D.61376>;
+      <D.61375>:
+      <D.61376>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Sp_counted_base<_Lp>::~_Sp_counted_base() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_base * const this)
+{
+  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2u>::~_Sp_counted_base (this);
+  <D.57967>:
+  operator delete (this);
+}
+
+
+std::__allocated_ptr<_Alloc>& std::__allocated_ptr<_Alloc>::operator=(std::nullptr_t) [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >; std::nullptr_t = std::nullptr_t] (struct __allocated_ptr * const this, <<< Unknown tree: nullptr_type >>> D.59494)
+{
+  struct __allocated_ptr & D.61377;
+
+  try
+    {
+      this->_M_ptr = 0B;
+      D.61377 = this;
+      return D.61377;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void operator delete(void*, void*) (void * D.11054, void * D.11055)
+{
+  try
+    {
+
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__allocated_ptr<_Alloc>::~__allocated_ptr() [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >] (struct __allocated_ptr * const this)
+{
+  struct _Sp_counted_ptr_inplace * D.61379;
+  struct _Sp_counted_ptr_inplace * D.61382;
+  struct allocator * D.61383;
+
+  try
+    {
+      {
+        try
+          {
+            D.61379 = this->_M_ptr;
+            if (D.61379 != 0B) goto <D.61380>; else goto <D.61381>;
+            <D.61380>:
+            D.61382 = this->_M_ptr;
+            D.61383 = this->_M_alloc;
+            std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> > >::deallocate (D.61383, D.61382, 1);
+            goto <D.61384>;
+            <D.61381>:
+            <D.61384>:
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.59756>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static void std::allocator_traits<_Alloc>::deallocate(_Alloc&, std::allocator_traits<_Alloc>::pointer, std::allocator_traits<_Alloc>::size_type) [with _Alloc = std::allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >; std::allocator_traits<_Alloc>::pointer = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>*; std::allocator_traits<_Alloc>::size_type = long unsigned int] (struct allocator & __a, struct _Sp_counted_ptr_inplace * __p, size_type __n)
+{
+  __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::deallocate (__a, __p, __n);
+}
+
+
+void __gnu_cxx::new_allocator<_Tp>::deallocate(__gnu_cxx::new_allocator<_Tp>::pointer, __gnu_cxx::new_allocator<_Tp>::size_type) [with _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>; __gnu_cxx::new_allocator<_Tp>::pointer = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>*; __gnu_cxx::new_allocator<_Tp>::size_type = long unsigned int] (struct new_allocator * const this, struct _Sp_counted_ptr_inplace * __p, size_type D.58820)
+{
+  operator delete (__p);
+}
+
+
+std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>] (struct allocator * const this)
+{
+  void * D.61385;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+
+              }
+            finally
+              {
+                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u> >::~new_allocator (this);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.59730>:
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61385 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61385);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = std::_Sp_counted_ptr_inplace<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, std::allocator<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >, (__gnu_cxx::_Lock_policy)2u>] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.60468>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void* std::__shared_count<_Lp>::_M_get_deleter(const std::type_info&) const [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (const struct __shared_count * const this, const struct type_info & __ti)
+{
+  void * D.61386;
+  void * iftmp.15;
+  struct _Sp_counted_base * D.61388;
+  struct _Sp_counted_base * D.61391;
+  struct _Sp_counted_base * D.61392;
+  int (*__vtbl_ptr_type) () * D.61393;
+  int (*__vtbl_ptr_type) () * D.61394;
+  int (*__vtbl_ptr_type) () D.61395;
+  struct _Sp_counted_base * D.61396;
+
+  try
+    {
+      D.61388 = this->_M_pi;
+      if (D.61388 != 0B) goto <D.61389>; else goto <D.61390>;
+      <D.61389>:
+      D.61391 = this->_M_pi;
+      D.61392 = this->_M_pi;
+      D.61393 = D.61392->_vptr._Sp_counted_base;
+      D.61394 = D.61393 + 32;
+      D.61395 = *D.61394;
+      D.61396 = this->_M_pi;
+      iftmp.15 = OBJ_TYPE_REF(D.61395;(struct _Sp_counted_base)D.61391->4) (D.61396, __ti);
+      goto <D.61397>;
+      <D.61390>:
+      iftmp.15 = 0B;
+      <D.61397>:
+      D.61386 = iftmp.15;
+      return D.61386;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::__enable_shared_from_this_helper(const std::__shared_count<_Lp>&, ...) [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (const struct __shared_count & D.58471)
+{
+  try
+    {
+
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::shared_ptr<_Tp>::shared_ptr(std::shared_ptr<_Tp1>&&) [with _Tp1 = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; <template-parameter-2-2> = void; _Tp = std::thread::_Impl_base] (struct shared_ptr * const this, struct shared_ptr & __r)
+{
+  struct type & D.61399;
+  struct __shared_ptr * D.61400;
+  struct __shared_ptr * D.61401;
+  struct __shared_ptr * D.61402;
+
+  try
+    {
+      {
+        D.61399 = std::move<std::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >&> (__r);
+        D.61400 = &D.61399->D.56160;
+        D.61401 = &this->D.50595;
+        std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2u>::__shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, void> (D.61401, D.61400);
+        try
+          {
+
+          }
+        catch
+          {
+            D.61402 = &this->D.50595;
+            std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2u>::~__shared_ptr (D.61402);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr typename std::remove_reference< <template-parameter-1-1> >::type&& std::move(_Tp&&) [with _Tp = std::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >&; typename std::remove_reference< <template-parameter-1-1> >::type = std::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >] (struct shared_ptr & __t)
+{
+  struct type & D.61403;
+
+  try
+    {
+      D.61403 = __t;
+      return D.61403;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::__shared_ptr<_Tp1, _Lp>&&) [with _Tp1 = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; <template-parameter-2-2> = void; _Tp = std::thread::_Impl_base; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_ptr * const this, struct __shared_ptr & __r)
+{
+  struct _Impl * D.61405;
+  struct __shared_count * D.61406;
+  struct __shared_count * D.61407;
+  struct __shared_count * D.61408;
+  struct __shared_count * D.61409;
+
+  try
+    {
+      {
+        D.61405 = __r->_M_ptr;
+        this->_M_ptr = D.61405;
+        D.61406 = &this->_M_refcount;
+        std::__shared_count<>::__shared_count (D.61406);
+        try
+          {
+            D.61407 = &__r->_M_refcount;
+            D.61408 = &this->_M_refcount;
+            std::__shared_count<>::_M_swap (D.61408, D.61407);
+            __r->_M_ptr = 0B;
+          }
+        catch
+          {
+            D.61409 = &this->_M_refcount;
+            std::__shared_count<>::~__shared_count (D.61409);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::__shared_count<_Lp>::_M_swap(std::__shared_count<_Lp>&) [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_count * const this, struct __shared_count & __r)
+{
+  struct _Sp_counted_base * D.61410;
+
+  try
+    {
+      {
+        struct _Sp_counted_base * __tmp;
+
+        __tmp = __r->_M_pi;
+        D.61410 = this->_M_pi;
+        __r->_M_pi = D.61410;
+        this->_M_pi = __tmp;
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::shared_ptr<std::thread::_Impl_base>::~shared_ptr() (struct shared_ptr * const this)
+{
+  struct __shared_ptr * D.61411;
+
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.61411 = &this->D.50595;
+            std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2u>::~__shared_ptr (D.61411);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.51171>:
+}
+
+
+std::__shared_ptr<_Tp, _Lp>::~__shared_ptr() [with _Tp = std::thread::_Impl_base; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_ptr * const this)
+{
+  struct __shared_count * D.61412;
+
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.61412 = &this->_M_refcount;
+            std::__shared_count<>::~__shared_count (D.61412);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.51166>:
+}
+
+
+std::__shared_count<_Lp>::~__shared_count() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_count * const this)
+{
+  struct _Sp_counted_base * D.61413;
+  struct _Sp_counted_base * D.61416;
+
+  try
+    {
+      {
+        try
+          {
+            D.61413 = this->_M_pi;
+            if (D.61413 != 0B) goto <D.61414>; else goto <D.61415>;
+            <D.61414>:
+            D.61416 = this->_M_pi;
+            std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2u>::_M_release (D.61416);
+            goto <D.61417>;
+            <D.61415>:
+            <D.61417>:
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.51986>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::_Sp_counted_base<_Lp>::_M_release() [with __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct _Sp_counted_base * const this)
+{
+  bool retval.16;
+  _Atomic_word * D.61419;
+  int D.61420;
+  int (*__vtbl_ptr_type) () * D.61423;
+  int (*__vtbl_ptr_type) () * D.61424;
+  int (*__vtbl_ptr_type) () D.61425;
+  bool retval.17;
+  _Atomic_word * D.61430;
+  int D.61431;
+  int (*__vtbl_ptr_type) () * D.61434;
+  int (*__vtbl_ptr_type) () * D.61435;
+  int (*__vtbl_ptr_type) () D.61436;
+
+  try
+    {
+      D.61419 = &this->_M_use_count;
+      D.61420 = __gnu_cxx::__exchange_and_add_dispatch (D.61419, -1);
+      retval.16 = D.61420 == 1;
+      if (retval.16 != 0) goto <D.61421>; else goto <D.61422>;
+      <D.61421>:
+      D.61423 = this->_vptr._Sp_counted_base;
+      D.61424 = D.61423 + 16;
+      D.61425 = *D.61424;
+      OBJ_TYPE_REF(D.61425;(struct _Sp_counted_base)this->2) (this);
+      if (0 != 0) goto <D.61426>; else goto <D.61427>;
+      <D.61426>:
+      __asm__ __volatile__("" :  :  : "memory");
+      __asm__ __volatile__("" :  :  : "memory");
+      goto <D.61428>;
+      <D.61427>:
+      <D.61428>:
+      D.61430 = &this->_M_weak_count;
+      D.61431 = __gnu_cxx::__exchange_and_add_dispatch (D.61430, -1);
+      retval.17 = D.61431 == 1;
+      if (retval.17 != 0) goto <D.61432>; else goto <D.61433>;
+      <D.61432>:
+      D.61434 = this->_vptr._Sp_counted_base;
+      D.61435 = D.61434 + 24;
+      D.61436 = *D.61435;
+      OBJ_TYPE_REF(D.61436;(struct _Sp_counted_base)this->3) (this);
+      goto <D.61437>;
+      <D.61433>:
+      <D.61437>:
+      goto <D.61438>;
+      <D.61422>:
+      <D.61438>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+_Atomic_word __gnu_cxx::__exchange_and_add_dispatch(_Atomic_word*, int) (_Atomic_word * __mem, int __val)
+{
+  bool retval.18;
+  int D.61440;
+  _Atomic_word D.61443;
+
+  D.61440 = __gthread_active_p ();
+  retval.18 = D.61440 != 0;
+  if (retval.18 != 0) goto <D.61441>; else goto <D.61442>;
+  <D.61441>:
+  D.61443 = __gnu_cxx::__exchange_and_add (__mem, __val);
+  return D.61443;
+  <D.61442>:
+  D.61443 = __gnu_cxx::__exchange_and_add_single (__mem, __val);
+  return D.61443;
+}
+
+
+int __gthread_active_p() ()
+{
+  int D.61445;
+  void * __gthread_active_ptr.19;
+  bool D.61447;
+  static void * const __gthread_active_ptr = (void *) __gthrw___pthread_key_create;
+
+  __gthread_active_ptr.19 = __gthread_active_ptr;
+  D.61447 = __gthread_active_ptr.19 != 0B;
+  D.61445 = (int) D.61447;
+  return D.61445;
+}
+
+
+_Atomic_word __gnu_cxx::__exchange_and_add(volatile _Atomic_word*, int) (volatile _Atomic_word * __mem, int __val)
+{
+  _Atomic_word D.61449;
+  unsigned int __val.20;
+  unsigned int D.61451;
+
+  __val.20 = (unsigned int) __val;
+  D.61451 = __atomic_fetch_add_4 (__mem, __val.20, 4);
+  D.61449 = (_Atomic_word) D.61451;
+  return D.61449;
+}
+
+
+_Atomic_word __gnu_cxx::__exchange_and_add_single(_Atomic_word*, int) (_Atomic_word * __mem, int __val)
+{
+  int D.61453;
+  int D.61454;
+  _Atomic_word D.61455;
+  _Atomic_word __result;
+
+  __result = *__mem;
+  D.61453 = *__mem;
+  D.61454 = D.61453 + __val;
+  *__mem = D.61454;
+  D.61455 = __result;
+  return D.61455;
+}
+
+
+std::shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> > >::~shared_ptr() (struct shared_ptr * const this)
+{
+  struct __shared_ptr * D.61457;
+
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.61457 = &this->D.56160;
+            std::__shared_ptr<std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >, (__gnu_cxx::_Lock_policy)2u>::~__shared_ptr (D.61457);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.56183>:
+}
+
+
+std::__shared_ptr<_Tp, _Lp>::~__shared_ptr() [with _Tp = std::thread::_Impl<std::_Bind_simple<void (*(char*))(const std::__cxx11::basic_string<char>&)> >; __gnu_cxx::_Lock_policy _Lp = (__gnu_cxx::_Lock_policy)2u] (struct __shared_ptr * const this)
+{
+  struct __shared_count * D.61458;
+
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.61458 = &this->_M_refcount;
+            std::__shared_count<>::~__shared_count (D.61458);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.56178>:
+}
+
+
+std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = char] (struct allocator * const this)
+{
+  void * D.61459;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+
+              }
+            finally
+              {
+                __gnu_cxx::new_allocator<char>::~new_allocator (this);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.52000>:
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.61459 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.61459);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = char] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.56399>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::thread::~thread() (struct thread * const this)
+{
+  bool retval.21;
+
+  try
+    {
+      {
+        try
+          {
+            retval.21 = std::thread::joinable (this);
+            if (retval.21 != 0) goto <D.61461>; else goto <D.61462>;
+            <D.61461>:
+            std::terminate ();
+            <D.61462>:
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.50787>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+bool std::thread::joinable() const (const struct thread * const this)
+{
+  bool D.61463;
+  struct id D.51142;
+  bool D.61464;
+
+  try
+    {
+      std::thread::id::id (&D.51142);
+      try
+        {
+          D.61464 = std::operator== (this->_M_id, D.51142);
+          D.61463 = ~D.61464;
+          return D.61463;
+        }
+      finally
+        {
+          D.51142 = {CLOBBER};
+        }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+bool std::operator==(std::thread::id, std::thread::id) (struct id __x, struct id __y)
+{
+  bool D.61467;
+  long unsigned int D.61468;
+  long unsigned int D.61469;
+  int D.61470;
+
+  try
+    {
+      D.61468 = __y._M_thread;
+      D.61469 = __x._M_thread;
+      D.61470 = __gthread_equal (D.61469, D.61468);
+      D.61467 = D.61470 != 0;
+      return D.61467;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+int __gthread_equal(__gthread_t, __gthread_t) (__gthread_t __t1, __gthread_t __t2)
+{
+  int D.61472;
+
+  D.61472 = __gthrw_pthread_equal (__t1, __t2);
+  return D.61472;
+}
+
+
+std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::~basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct basic_string * const this)
+{
+  struct _Alloc_hider * D.61474;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+                std::__cxx11::basic_string<char>::_M_dispose (this);
+              }
+            finally
+              {
+                D.61474 = &this->_M_dataplus;
+                std::__cxx11::basic_string<char>::_Alloc_hider::~_Alloc_hider (D.61474);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.51575>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+int main() ()
+{
+  int D.61476;
+
+  start ();
+  <D.61475>:
+  goto <D.61475>;
+  D.61476 = 0;
+  return D.61476;
+  D.61476 = 0;
+  return D.61476;
+}
+
+
+void __static_initialization_and_destruction_0(int, int) (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.61478>; else goto <D.61479>;
+  <D.61478>:
+  if (__priority == 65535) goto <D.61480>; else goto <D.61481>;
+  <D.61480>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__comp_dtor , &__ioinit, &__dso_handle);
+  goto <D.61482>;
+  <D.61481>:
+  <D.61482>:
+  goto <D.61483>;
+  <D.61479>:
+  <D.61483>:
+}
+
+
+(static initializers for main.cc) ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

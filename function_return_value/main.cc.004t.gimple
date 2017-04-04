@@ -1,0 +1,36 @@
+void f(int&&) (int & val)
+{
+  int & t;
+
+  t = val;
+  *t = 1;
+}
+
+
+void ff(int&) (int & val)
+{
+  *val = 1;
+}
+
+
+int main() ()
+{
+  int D.2094;
+  int D.2096;
+
+  D.2094 = 1;
+  try
+    {
+      f (&D.2094);
+    }
+  finally
+    {
+      D.2094 = {CLOBBER};
+    }
+  D.2096 = 0;
+  return D.2096;
+  D.2096 = 0;
+  return D.2096;
+}
+
+

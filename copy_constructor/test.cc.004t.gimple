@@ -1,0 +1,49 @@
+int main() ()
+{
+  int D.2185;
+
+  {
+    struct Cat c;
+    struct Cat d;
+
+    try
+      {
+        Cat::Cat (&c);
+        Cat::Cat (&d);
+        Pet::set (&c.D.2136);
+        d = c;
+        D.2185 = 0;
+        return D.2185;
+      }
+    finally
+      {
+        c = {CLOBBER};
+        d = {CLOBBER};
+      }
+  }
+  D.2185 = 0;
+  return D.2185;
+}
+
+
+Cat::Cat() (struct Cat * const this)
+{
+  struct Pet * D.2188;
+
+  D.2188 = &this->D.2136;
+  Pet::Pet (D.2188);
+}
+
+
+Pet::Pet() (struct Pet * const this)
+{
+
+}
+
+
+void Pet::set() (struct Pet * const this)
+{
+  this->p_name = 3;
+}
+
+

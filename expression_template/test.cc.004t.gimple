@@ -1,0 +1,1752 @@
+int main() ()
+{
+  struct initializer_list D.42728;
+  struct allocator_type D.39550;
+  struct initializer_list D.42729;
+  struct allocator_type D.39556;
+  struct initializer_list D.42730;
+  struct allocator_type D.39562;
+  const struct VecSum D.39689;
+  const struct VecSum D.39636;
+  int D.42731;
+
+  {
+    struct vector v1;
+    struct vector v2;
+    struct vector v3;
+    struct Vec m1;
+    struct Vec m2;
+    struct Vec m3;
+    struct Vec res;
+
+    try
+      {
+        D.42728._M_array = &._85;
+        D.42728._M_len = 3;
+        std::allocator<int>::allocator (&D.39550);
+        try
+          {
+            std::vector<int>::vector (&v1, D.42728, &D.39550);
+          }
+        finally
+          {
+            try
+              {
+                std::allocator<int>::~allocator (&D.39550);
+              }
+            catch
+              {
+                std::vector<int>::~vector (&v1);
+              }
+            D.39550 = {CLOBBER};
+          }
+        try
+          {
+            D.42729._M_array = &._86;
+            D.42729._M_len = 3;
+            std::allocator<int>::allocator (&D.39556);
+            try
+              {
+                std::vector<int>::vector (&v2, D.42729, &D.39556);
+              }
+            finally
+              {
+                try
+                  {
+                    std::allocator<int>::~allocator (&D.39556);
+                  }
+                catch
+                  {
+                    std::vector<int>::~vector (&v2);
+                  }
+                D.39556 = {CLOBBER};
+              }
+            try
+              {
+                D.42730._M_array = &._87;
+                D.42730._M_len = 3;
+                std::allocator<int>::allocator (&D.39562);
+                try
+                  {
+                    std::vector<int>::vector (&v3, D.42730, &D.39562);
+                  }
+                finally
+                  {
+                    try
+                      {
+                        std::allocator<int>::~allocator (&D.39562);
+                      }
+                    catch
+                      {
+                        std::vector<int>::~vector (&v3);
+                      }
+                    D.39562 = {CLOBBER};
+                  }
+                try
+                  {
+                    Vec::Vec (&m1, &v1);
+                    try
+                      {
+                        Vec::Vec (&m2, &v2);
+                        try
+                          {
+                            Vec::Vec (&m3, &v3);
+                            try
+                              {
+                                D.39636 = operator+<Vec, Vec> (&m1, &m2);
+                                try
+                                  {
+                                    D.39689 = operator+<const VecSum<Vec, Vec>, Vec> (&D.39636, &m3);
+                                    try
+                                      {
+                                        Vec::Vec<VecSum<const VecSum<Vec, Vec>, Vec> > (&res, &D.39689);
+                                      }
+                                    finally
+                                      {
+                                        try
+                                          {
+
+                                          }
+                                        catch
+                                          {
+                                            Vec::~Vec (&res);
+                                          }
+                                        D.39689 = {CLOBBER};
+                                      }
+                                  }
+                                finally
+                                  {
+                                    try
+                                      {
+
+                                      }
+                                    catch
+                                      {
+                                        Vec::~Vec (&res);
+                                      }
+                                    D.39636 = {CLOBBER};
+                                  }
+                                try
+                                  {
+                                    D.42731 = 0;
+                                    return D.42731;
+                                  }
+                                finally
+                                  {
+                                    Vec::~Vec (&res);
+                                  }
+                              }
+                            finally
+                              {
+                                Vec::~Vec (&m3);
+                              }
+                          }
+                        finally
+                          {
+                            Vec::~Vec (&m2);
+                          }
+                      }
+                    finally
+                      {
+                        Vec::~Vec (&m1);
+                      }
+                  }
+                finally
+                  {
+                    std::vector<int>::~vector (&v3);
+                  }
+              }
+            finally
+              {
+                std::vector<int>::~vector (&v2);
+              }
+          }
+        finally
+          {
+            std::vector<int>::~vector (&v1);
+          }
+      }
+    finally
+      {
+        v1 = {CLOBBER};
+        v2 = {CLOBBER};
+        v3 = {CLOBBER};
+        m1 = {CLOBBER};
+        m2 = {CLOBBER};
+        m3 = {CLOBBER};
+        res = {CLOBBER};
+      }
+  }
+  D.42731 = 0;
+  return D.42731;
+}
+
+
+std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = int] (struct allocator * const this)
+{
+  void * D.42754;
+
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<int>::new_allocator (this);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<int>::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.42754 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.42754);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = int] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<int>] (struct vector * const this, struct initializer_list __l, const struct allocator_type & __a)
+{
+  struct _Vector_base * D.42755;
+  struct forward_iterator_tag D.40793;
+  struct random_access_iterator_tag D.40794;
+  struct random_access_iterator_tag * D.42756;
+  struct forward_iterator_tag D.42757;
+  const int * D.42758;
+  const int * D.42759;
+  struct _Vector_base * D.42760;
+
+  D.42755 = &this->D.39385;
+  std::_Vector_base<int, std::allocator<int> >::_Vector_base (D.42755, __a);
+  try
+    {
+      try
+        {
+          D.42756 = &D.40794;
+          D.42758 = std::initializer_list<int>::end (&__l);
+          D.42759 = std::initializer_list<int>::begin (&__l);
+          std::vector<int>::_M_range_initialize<const int*> (this, D.42759, D.42758, D.42757);
+        }
+      finally
+        {
+          D.40794 = {CLOBBER};
+        }
+    }
+  catch
+    {
+      D.42760 = &this->D.39385;
+      std::_Vector_base<int, std::allocator<int> >::~_Vector_base (D.42760);
+    }
+}
+
+
+std::_Vector_base<_Tp, _Alloc>::_Vector_base(const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>; std::_Vector_base<_Tp, _Alloc>::allocator_type = std::allocator<int>] (struct _Vector_base * const this, const struct allocator_type & __a)
+{
+  struct _Vector_impl * D.42763;
+  struct _Vector_impl * D.42764;
+
+  try
+    {
+      {
+        D.42763 = &this->_M_impl;
+        std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl (D.42763, __a);
+        try
+          {
+
+          }
+        catch
+          {
+            D.42764 = &this->_M_impl;
+            std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl (D.42764);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Vector_base<_Tp, _Alloc>::_Vector_impl::_Vector_impl(const _Tp_alloc_type&) [with _Tp = int; _Alloc = std::allocator<int>; std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type = std::allocator<int>] (struct _Vector_impl * const this, const struct _Tp_alloc_type & __a)
+{
+  try
+    {
+      {
+        std::allocator<int>::allocator (this, __a);
+        try
+          {
+            this->_M_start = 0B;
+            this->_M_finish = 0B;
+            this->_M_end_of_storage = 0B;
+          }
+        catch
+          {
+            std::allocator<int>::~allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::allocator< <template-parameter-1-1> >::allocator(const std::allocator< <template-parameter-1-1> >&) [with _Tp = int] (struct allocator * const this, const struct allocator & __a)
+{
+  void * D.42765;
+
+  try
+    {
+      {
+        __gnu_cxx::new_allocator<int>::new_allocator (this, __a);
+        try
+          {
+
+          }
+        catch
+          {
+            __gnu_cxx::new_allocator<int>::~new_allocator (this);
+          }
+      }
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.42765 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.42765);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator(const __gnu_cxx::new_allocator<_Tp>&) [with _Tp = int] (struct new_allocator * const this, const struct new_allocator & D.37940)
+{
+  try
+    {
+      {
+
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr const _E* std::initializer_list<_E>::end() const [with _E = int; std::initializer_list<_E>::const_iterator = const int*] (const struct initializer_list * const this)
+{
+  const int * D.42766;
+  const int * D.42767;
+  long unsigned int D.42768;
+  long unsigned int D.42769;
+
+  try
+    {
+      D.42767 = std::initializer_list<int>::begin (this);
+      D.42768 = std::initializer_list<int>::size (this);
+      D.42769 = D.42768 * 4;
+      D.42766 = D.42767 + D.42769;
+      return D.42766;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr std::initializer_list<_E>::size_type std::initializer_list<_E>::size() const [with _E = int; std::initializer_list<_E>::size_type = long unsigned int] (const struct initializer_list * const this)
+{
+  size_type D.42771;
+
+  try
+    {
+      D.42771 = this->_M_len;
+      return D.42771;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+constexpr const _E* std::initializer_list<_E>::begin() const [with _E = int; std::initializer_list<_E>::const_iterator = const int*] (const struct initializer_list * const this)
+{
+  const int * D.42773;
+
+  try
+    {
+      D.42773 = this->_M_array;
+      return D.42773;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::vector<_Tp, _Alloc>::_M_range_initialize(_ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const int*; _Tp = int; _Alloc = std::allocator<int>] (struct vector * const this, const int * __first, const int * __last, struct forward_iterator_tag D.40785)
+{
+  long int D.42775;
+  struct _Vector_base * D.42776;
+  int * D.42777;
+  int * D.42778;
+  long unsigned int D.42779;
+  int * D.42780;
+  struct _Vector_base * D.42781;
+  struct _Tp_alloc_type & D.42782;
+  int * D.42783;
+  int * D.42784;
+  const size_type __n;
+
+  D.42775 = std::distance<const int*> (__first, __last);
+  __n = (const size_type) D.42775;
+  D.42776 = &this->D.39385;
+  D.42777 = std::_Vector_base<int, std::allocator<int> >::_M_allocate (D.42776, __n);
+  this->D.39385._M_impl._M_start = D.42777;
+  D.42778 = this->D.39385._M_impl._M_start;
+  D.42779 = __n * 4;
+  D.42780 = D.42778 + D.42779;
+  this->D.39385._M_impl._M_end_of_storage = D.42780;
+  D.42781 = &this->D.39385;
+  D.42782 = std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator (D.42781);
+  D.42783 = this->D.39385._M_impl._M_start;
+  D.42784 = std::__uninitialized_copy_a<const int*, int*, int> (__first, __last, D.42783, D.42782);
+  this->D.39385._M_impl._M_finish = D.42784;
+}
+
+
+typename std::iterator_traits<_Iterator>::difference_type std::distance(_InputIterator, _InputIterator) [with _InputIterator = const int*; typename std::iterator_traits<_Iterator>::difference_type = long int] (const int * __first, const int * __last)
+{
+  difference_type D.42788;
+  struct iterator_category D.41558;
+  struct random_access_iterator_tag D.42789;
+  const int * __first.0;
+
+  std::__iterator_category<const int*> (&__first);
+  try
+    {
+      __first.0 = __first;
+      D.42788 = std::__distance<const int*> (__first.0, __last, D.42789);
+      return D.42788;
+    }
+  finally
+    {
+      D.41558 = {CLOBBER};
+    }
+}
+
+
+typename std::iterator_traits<_Iterator>::iterator_category std::__iterator_category(const _Iter&) [with _Iter = const int*; typename std::iterator_traits<_Iterator>::iterator_category = std::random_access_iterator_tag] (const int * const & D.41557)
+{
+  struct iterator_category D.42793;
+
+  return D.42793;
+}
+
+
+typename std::iterator_traits<_Iterator>::difference_type std::__distance(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const int*; typename std::iterator_traits<_Iterator>::difference_type = long int] (const int * __first, const int * __last, struct random_access_iterator_tag D.41562)
+{
+  difference_type D.42795;
+  long int __last.1;
+  long int __first.2;
+  long int D.42798;
+
+  __last.1 = (long int) __last;
+  __first.2 = (long int) __first;
+  D.42798 = __last.1 - __first.2;
+  D.42795 = D.42798 /[ex] 4;
+  return D.42795;
+}
+
+
+std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>; std::_Vector_base<_Tp, _Alloc>::pointer = int*; std::size_t = long unsigned int] (struct _Vector_base * const this, size_t __n)
+{
+  int * D.42800;
+  int * iftmp.3;
+  struct _Vector_impl * D.42804;
+  typedef struct _Tr _Tr;
+
+  if (__n != 0) goto <D.42802>; else goto <D.42803>;
+  <D.42802>:
+  D.42804 = &this->_M_impl;
+  iftmp.3 = std::allocator_traits<std::allocator<int> >::allocate (D.42804, __n);
+  goto <D.42805>;
+  <D.42803>:
+  iftmp.3 = 0B;
+  <D.42805>:
+  D.42800 = iftmp.3;
+  return D.42800;
+}
+
+
+static std::allocator_traits<_Alloc>::pointer std::allocator_traits<_Alloc>::allocate(_Alloc&, std::allocator_traits<_Alloc>::size_type) [with _Alloc = std::allocator<int>; std::allocator_traits<_Alloc>::pointer = int*; std::allocator_traits<_Alloc>::size_type = long unsigned int] (struct allocator & __a, size_type __n)
+{
+  int * D.42808;
+
+  D.42808 = __gnu_cxx::new_allocator<int>::allocate (__a, __n, 0B);
+  return D.42808;
+}
+
+
+_Tp* __gnu_cxx::new_allocator<_Tp>::allocate(__gnu_cxx::new_allocator<_Tp>::size_type, const void*) [with _Tp = int; __gnu_cxx::new_allocator<_Tp>::pointer = int*; __gnu_cxx::new_allocator<_Tp>::size_type = long unsigned int] (struct new_allocator * const this, size_type __n, const void * D.37896)
+{
+  bool retval.4;
+  long unsigned int D.42812;
+  int * D.42815;
+  long unsigned int D.42816;
+
+  D.42812 = __gnu_cxx::new_allocator<int>::max_size (this);
+  retval.4 = D.42812 < __n;
+  if (retval.4 != 0) goto <D.42813>; else goto <D.42814>;
+  <D.42813>:
+  std::__throw_bad_alloc ();
+  <D.42814>:
+  D.42816 = __n * 4;
+  D.42815 = operator new (D.42816);
+  return D.42815;
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::size_type __gnu_cxx::new_allocator<_Tp>::max_size() const [with _Tp = int; __gnu_cxx::new_allocator<_Tp>::size_type = long unsigned int] (const struct new_allocator * const this)
+{
+  size_type D.42819;
+
+  try
+    {
+      D.42819 = 4611686018427387903;
+      return D.42819;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type& std::_Vector_base<_Tp, _Alloc>::_M_get_Tp_allocator() [with _Tp = int; _Alloc = std::allocator<int>; std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type = std::allocator<int>] (struct _Vector_base * const this)
+{
+  struct _Tp_alloc_type & D.42821;
+
+  try
+    {
+      D.42821 = &this->_M_impl;
+      return D.42821;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = const int*; _ForwardIterator = int*; _Tp = int] (const int * __first, const int * __last, int * __result, struct allocator & D.41044)
+{
+  int * D.42823;
+
+  D.42823 = std::uninitialized_copy<const int*, int*> (__first, __last, __result);
+  return D.42823;
+}
+
+
+_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const int*; _ForwardIterator = int*] (const int * __first, const int * __last, int * __result)
+{
+  int * D.42826;
+  typedef _ValueType1 _ValueType1;
+  typedef _ValueType2 _ValueType2;
+  typedef const int & _RefType1;
+  typedef int & _RefType2;
+  const bool __assignable;
+
+  __assignable = 1;
+  D.42826 = std::__uninitialized_copy<true>::__uninit_copy<const int*, int*> (__first, __last, __result);
+  return D.42826;
+}
+
+
+static _ForwardIterator std::__uninitialized_copy<true>::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const int*; _ForwardIterator = int*] (const int * __first, const int * __last, int * __result)
+{
+  int * D.42829;
+
+  D.42829 = std::copy<const int*, int*> (__first, __last, __result);
+  return D.42829;
+}
+
+
+_OI std::copy(_II, _II, _OI) [with _II = const int*; _OI = int*] (const int * __first, const int * __last, int * __result)
+{
+  int * D.42832;
+  const int * D.42833;
+  const int * D.42834;
+
+  D.42833 = std::__miter_base<const int*> (__last);
+  D.42834 = std::__miter_base<const int*> (__first);
+  D.42832 = std::__copy_move_a2<false, const int*, int*> (D.42834, D.42833, __result);
+  return D.42832;
+}
+
+
+typename std::_Miter_base<_Iterator>::iterator_type std::__miter_base(_Iterator) [with _Iterator = const int*; typename std::_Miter_base<_Iterator>::iterator_type = const int*] (const int * __it)
+{
+  const int * D.42839;
+
+  D.42839 = std::_Iter_base<const int*, false>::_S_base (__it);
+  return D.42839;
+}
+
+
+static std::_Iter_base<_Iterator, _HasBase>::iterator_type std::_Iter_base<_Iterator, _HasBase>::_S_base(_Iterator) [with _Iterator = const int*; bool _HasBase = false; std::_Iter_base<_Iterator, _HasBase>::iterator_type = const int*] (const int * __it)
+{
+  const int * D.42841;
+
+  D.42841 = __it;
+  return D.42841;
+}
+
+
+_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = const int*; _OI = int*] (const int * __first, const int * __last, int * __result)
+{
+  int * D.42843;
+  int * D.42844;
+  const int * D.42845;
+  const int * D.42846;
+
+  D.42844 = std::__niter_base<int*> (__result);
+  D.42845 = std::__niter_base<const int*> (__last);
+  D.42846 = std::__niter_base<const int*> (__first);
+  D.42843 = std::__copy_move_a<false, const int*, int*> (D.42846, D.42845, D.42844);
+  return D.42843;
+}
+
+
+typename std::_Niter_base<_Iterator>::iterator_type std::__niter_base(_Iterator) [with _Iterator = int*; typename std::_Niter_base<_Iterator>::iterator_type = int*] (int * __it)
+{
+  int * D.42850;
+
+  D.42850 = std::_Iter_base<int*, false>::_S_base (__it);
+  return D.42850;
+}
+
+
+static std::_Iter_base<_Iterator, _HasBase>::iterator_type std::_Iter_base<_Iterator, _HasBase>::_S_base(_Iterator) [with _Iterator = int*; bool _HasBase = false; std::_Iter_base<_Iterator, _HasBase>::iterator_type = int*] (int * __it)
+{
+  int * D.42852;
+
+  D.42852 = __it;
+  return D.42852;
+}
+
+
+typename std::_Niter_base<_Iterator>::iterator_type std::__niter_base(_Iterator) [with _Iterator = const int*; typename std::_Niter_base<_Iterator>::iterator_type = const int*] (const int * __it)
+{
+  const int * D.42854;
+
+  D.42854 = std::_Iter_base<const int*, false>::_S_base (__it);
+  return D.42854;
+}
+
+
+_OI std::__copy_move_a(_II, _II, _OI) [with bool _IsMove = false; _II = const int*; _OI = int*] (const int * __first, const int * __last, int * __result)
+{
+  int * D.42856;
+  typedef _ValueTypeI _ValueTypeI;
+  typedef _ValueTypeO _ValueTypeO;
+  typedef struct _Category _Category;
+  const bool __simple;
+
+  __simple = 1;
+  D.42856 = std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<int> (__first, __last, __result);
+  return D.42856;
+}
+
+
+static _Tp* std::__copy_move<_IsMove, true, std::random_access_iterator_tag>::__copy_m(const _Tp*, const _Tp*, _Tp*) [with _Tp = int; bool _IsMove = false] (const int * __first, const int * __last, int * __result)
+{
+  long int __last.5;
+  long int __first.6;
+  long int D.42860;
+  long unsigned int _Num.7;
+  long unsigned int D.42864;
+  int * D.42866;
+  long unsigned int _Num.8;
+  long unsigned int D.42868;
+  const ptrdiff_t _Num;
+
+  __last.5 = (long int) __last;
+  __first.6 = (long int) __first;
+  D.42860 = __last.5 - __first.6;
+  _Num = D.42860 /[ex] 4;
+  if (_Num != 0) goto <D.42861>; else goto <D.42862>;
+  <D.42861>:
+  _Num.7 = (long unsigned int) _Num;
+  D.42864 = _Num.7 * 4;
+  __builtin_memmove (__result, __first, D.42864);
+  goto <D.42865>;
+  <D.42862>:
+  <D.42865>:
+  _Num.8 = (long unsigned int) _Num;
+  D.42868 = _Num.8 * 4;
+  D.42866 = __result + D.42868;
+  return D.42866;
+}
+
+
+std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = int; _Alloc = std::allocator<int>] (struct _Vector_base * const this)
+{
+  int * D.42870;
+  long int D.42871;
+  int * D.42872;
+  long int D.42873;
+  long int D.42874;
+  long int D.42875;
+  long unsigned int D.42876;
+  int * D.42877;
+  struct _Vector_impl * D.42878;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+                D.42870 = this->_M_impl._M_end_of_storage;
+                D.42871 = (long int) D.42870;
+                D.42872 = this->_M_impl._M_start;
+                D.42873 = (long int) D.42872;
+                D.42874 = D.42871 - D.42873;
+                D.42875 = D.42874 /[ex] 4;
+                D.42876 = (long unsigned int) D.42875;
+                D.42877 = this->_M_impl._M_start;
+                std::_Vector_base<int, std::allocator<int> >::_M_deallocate (this, D.42877, D.42876);
+              }
+            finally
+              {
+                D.42878 = &this->_M_impl;
+                std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl (D.42878);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.41001>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::_Vector_base<_Tp, _Alloc>::_M_deallocate(std::_Vector_base<_Tp, _Alloc>::pointer, std::size_t) [with _Tp = int; _Alloc = std::allocator<int>; std::_Vector_base<_Tp, _Alloc>::pointer = int*; std::size_t = long unsigned int] (struct _Vector_base * const this, int * __p, size_t __n)
+{
+  struct _Vector_impl * D.42881;
+  typedef struct _Tr _Tr;
+
+  if (__p != 0B) goto <D.42879>; else goto <D.42880>;
+  <D.42879>:
+  D.42881 = &this->_M_impl;
+  std::allocator_traits<std::allocator<int> >::deallocate (D.42881, __p, __n);
+  goto <D.42882>;
+  <D.42880>:
+  <D.42882>:
+}
+
+
+static void std::allocator_traits<_Alloc>::deallocate(_Alloc&, std::allocator_traits<_Alloc>::pointer, std::allocator_traits<_Alloc>::size_type) [with _Alloc = std::allocator<int>; std::allocator_traits<_Alloc>::pointer = int*; std::allocator_traits<_Alloc>::size_type = long unsigned int] (struct allocator & __a, int * __p, size_type __n)
+{
+  __gnu_cxx::new_allocator<int>::deallocate (__a, __p, __n);
+}
+
+
+void __gnu_cxx::new_allocator<_Tp>::deallocate(__gnu_cxx::new_allocator<_Tp>::pointer, __gnu_cxx::new_allocator<_Tp>::size_type) [with _Tp = int; __gnu_cxx::new_allocator<_Tp>::pointer = int*; __gnu_cxx::new_allocator<_Tp>::size_type = long unsigned int] (struct new_allocator * const this, int * __p, size_type D.37900)
+{
+  operator delete (__p);
+}
+
+
+std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl() (struct _Vector_impl * const this)
+{
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            std::allocator<int>::~allocator (this);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.40992>:
+}
+
+
+std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = int] (struct allocator * const this)
+{
+  void * D.42883;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+
+              }
+            finally
+              {
+                __gnu_cxx::new_allocator<int>::~new_allocator (this);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.40674>:
+    }
+  catch
+    {
+      <<<eh_filter (NULL)>>>
+        {
+          
+            D.42883 = __builtin_eh_pointer (0);
+            __cxa_call_unexpected (D.42883);
+          
+        }
+    }
+}
+
+
+__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = int] (struct new_allocator * const this)
+{
+  try
+    {
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.41029>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+Vec::Vec(const std::vector<int>&) (struct Vec * const this, const struct vector & vec)
+{
+  struct vector * D.42884;
+  struct vector * D.42885;
+
+  VecExpression<Vec>::VecExpression (this);
+  D.42884 = &this->elements;
+  std::vector<int>::vector (D.42884, vec);
+  try
+    {
+
+    }
+  catch
+    {
+      D.42885 = &this->elements;
+      std::vector<int>::~vector (D.42885);
+    }
+}
+
+
+constexpr VecExpression<Vec>::VecExpression() (struct VecExpression * const this)
+{
+
+}
+
+
+std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = int; _Alloc = std::allocator<int>] (struct vector * const this, const struct vector & __x)
+{
+  struct allocator D.40646;
+  const struct _Vector_base * D.42886;
+  const struct _Tp_alloc_type & D.42887;
+  long unsigned int D.42888;
+  struct _Vector_base * D.42889;
+  struct _Vector_base * D.42890;
+  struct _Tp_alloc_type & D.42891;
+  int * D.42892;
+  struct __normal_iterator D.42893;
+  struct __normal_iterator D.42894;
+  int * D.42895;
+  struct _Vector_base * D.42896;
+
+  D.42886 = &__x->D.39385;
+  D.42887 = std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator (D.42886);
+  D.40646 = __gnu_cxx::__alloc_traits<std::allocator<int> >::_S_select_on_copy (D.42887); [return slot optimization]
+  try
+    {
+      D.42888 = std::vector<int>::size (__x);
+      D.42889 = &this->D.39385;
+      std::_Vector_base<int, std::allocator<int> >::_Vector_base (D.42889, D.42888, &D.40646);
+    }
+  finally
+    {
+      std::allocator<int>::~allocator (&D.40646);
+      D.40646 = {CLOBBER};
+    }
+  try
+    {
+      D.42890 = &this->D.39385;
+      D.42891 = std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator (D.42890);
+      D.42892 = this->D.39385._M_impl._M_start;
+      D.42893 = std::vector<int>::end (__x);
+      D.42894 = std::vector<int>::begin (__x);
+      D.42895 = std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<const int*, std::vector<int> >, int*, int> (D.42894, D.42893, D.42892, D.42891);
+      this->D.39385._M_impl._M_finish = D.42895;
+    }
+  catch
+    {
+      D.42896 = &this->D.39385;
+      std::_Vector_base<int, std::allocator<int> >::~_Vector_base (D.42896);
+    }
+}
+
+
+const _Tp_alloc_type& std::_Vector_base<_Tp, _Alloc>::_M_get_Tp_allocator() const [with _Tp = int; _Alloc = std::allocator<int>; std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type = std::allocator<int>] (const struct _Vector_base * const this)
+{
+  const struct _Tp_alloc_type & D.42900;
+
+  try
+    {
+      D.42900 = &this->_M_impl;
+      return D.42900;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+static _Alloc __gnu_cxx::__alloc_traits<_Alloc>::_S_select_on_copy(const _Alloc&) [with _Alloc = std::allocator<int>] (const struct allocator & __a)
+{
+  *<retval> = std::allocator_traits<std::allocator<int> >::select_on_container_copy_construction (__a); [return slot optimization]
+  return <retval>;
+}
+
+
+static _Alloc std::allocator_traits<_Alloc>::select_on_container_copy_construction(const _Alloc&) [with _Alloc = std::allocator<int>] (const struct allocator & __rhs)
+{
+  *<retval> = std::allocator_traits<std::allocator<int> >::_S_select<const std::allocator<int>, void> (__rhs, 0); [return slot optimization]
+  return <retval>;
+}
+
+
+static _Alloc2 std::allocator_traits<_Alloc>::_S_select(_Alloc2&, ...) [with _Alloc2 = const std::allocator<int>; <template-parameter-2-2> = void; _Alloc = std::allocator<int>] (const struct allocator & __a)
+{
+  std::allocator<int>::allocator (<retval>, __a);
+  return <retval>;
+}
+
+
+std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::size() const [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::size_type = long unsigned int] (const struct vector * const this)
+{
+  size_type D.42908;
+  int * D.42909;
+  long int D.42910;
+  int * D.42911;
+  long int D.42912;
+  long int D.42913;
+  long int D.42914;
+
+  try
+    {
+      D.42909 = this->D.39385._M_impl._M_finish;
+      D.42910 = (long int) D.42909;
+      D.42911 = this->D.39385._M_impl._M_start;
+      D.42912 = (long int) D.42911;
+      D.42913 = D.42910 - D.42912;
+      D.42914 = D.42913 /[ex] 4;
+      D.42908 = (size_type) D.42914;
+      return D.42908;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::_Vector_base<_Tp, _Alloc>::_Vector_base(std::size_t, const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>; std::size_t = long unsigned int; std::_Vector_base<_Tp, _Alloc>::allocator_type = std::allocator<int>] (struct _Vector_base * const this, size_t __n, const struct allocator_type & __a)
+{
+  struct _Vector_impl * D.42916;
+  struct _Vector_impl * D.42917;
+
+  D.42916 = &this->_M_impl;
+  std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl (D.42916, __a);
+  try
+    {
+      std::_Vector_base<int, std::allocator<int> >::_M_create_storage (this, __n);
+    }
+  catch
+    {
+      D.42917 = &this->_M_impl;
+      std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl (D.42917);
+    }
+}
+
+
+void std::_Vector_base<_Tp, _Alloc>::_M_create_storage(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>; std::size_t = long unsigned int] (struct _Vector_base * const this, size_t __n)
+{
+  int * D.42919;
+  int * D.42920;
+  int * D.42921;
+  long unsigned int D.42922;
+  int * D.42923;
+
+  D.42919 = std::_Vector_base<int, std::allocator<int> >::_M_allocate (this, __n);
+  this->_M_impl._M_start = D.42919;
+  D.42920 = this->_M_impl._M_start;
+  this->_M_impl._M_finish = D.42920;
+  D.42921 = this->_M_impl._M_start;
+  D.42922 = __n * 4;
+  D.42923 = D.42921 + D.42922;
+  this->_M_impl._M_end_of_storage = D.42923;
+}
+
+
+std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::const_iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; typename __gnu_cxx::__alloc_traits<typename std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type>::const_pointer = const int*] (const struct vector * const this)
+{
+  struct const_iterator D.42925;
+  struct const_iterator D.41009;
+  const int * const D.41008;
+  int * D.42926;
+
+  try
+    {
+      D.42926 = this->D.39385._M_impl._M_finish;
+      D.41008 = D.42926;
+      try
+        {
+          __gnu_cxx::__normal_iterator<const int*, std::vector<int> >::__normal_iterator (&D.41009, &D.41008);
+          try
+            {
+              D.42925 = D.41009;
+              return D.42925;
+            }
+          finally
+            {
+              D.41009 = {CLOBBER};
+            }
+        }
+      finally
+        {
+          D.41008 = {CLOBBER};
+        }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const int*; _Container = std::vector<int>] (struct __normal_iterator * const this, const int * const & __i)
+{
+  const int * D.42930;
+
+  try
+    {
+      {
+        D.42930 = *__i;
+        this->_M_current = D.42930;
+      }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::const_iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; typename __gnu_cxx::__alloc_traits<typename std::_Vector_base<_Tp, _Alloc>::_Tp_alloc_type>::const_pointer = const int*] (const struct vector * const this)
+{
+  struct const_iterator D.42931;
+  struct const_iterator D.41006;
+  const int * const D.41005;
+  int * D.42932;
+
+  try
+    {
+      D.42932 = this->D.39385._M_impl._M_start;
+      D.41005 = D.42932;
+      try
+        {
+          __gnu_cxx::__normal_iterator<const int*, std::vector<int> >::__normal_iterator (&D.41006, &D.41005);
+          try
+            {
+              D.42931 = D.41006;
+              return D.42931;
+            }
+          finally
+            {
+              D.41006 = {CLOBBER};
+            }
+        }
+      finally
+        {
+          D.41005 = {CLOBBER};
+        }
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _ForwardIterator = int*; _Tp = int] (struct __normal_iterator __first, struct __normal_iterator __last, int * __result, struct allocator & D.40612)
+{
+  int * D.42936;
+
+  D.42936 = std::uninitialized_copy<__gnu_cxx::__normal_iterator<const int*, std::vector<int> >, int*> (__first, __last, __result);
+  return D.42936;
+}
+
+
+_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _ForwardIterator = int*] (struct __normal_iterator __first, struct __normal_iterator __last, int * __result)
+{
+  int * D.42939;
+  typedef _ValueType1 _ValueType1;
+  typedef _ValueType2 _ValueType2;
+  typedef const int & _RefType1;
+  typedef int & _RefType2;
+  const bool __assignable;
+
+  __assignable = 1;
+  D.42939 = std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<const int*, std::vector<int> >, int*> (__first, __last, __result);
+  return D.42939;
+}
+
+
+static _ForwardIterator std::__uninitialized_copy<true>::__uninit_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _ForwardIterator = int*] (struct __normal_iterator __first, struct __normal_iterator __last, int * __result)
+{
+  int * D.42942;
+
+  D.42942 = std::copy<__gnu_cxx::__normal_iterator<const int*, std::vector<int> >, int*> (__first, __last, __result);
+  return D.42942;
+}
+
+
+_OI std::copy(_II, _II, _OI) [with _II = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _OI = int*] (struct __normal_iterator __first, struct __normal_iterator __last, int * __result)
+{
+  int * D.42945;
+  struct __normal_iterator D.42946;
+  struct __normal_iterator D.42947;
+
+  D.42946 = std::__miter_base<__gnu_cxx::__normal_iterator<const int*, std::vector<int> > > (__last);
+  D.42947 = std::__miter_base<__gnu_cxx::__normal_iterator<const int*, std::vector<int> > > (__first);
+  D.42945 = std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<const int*, std::vector<int> >, int*> (D.42947, D.42946, __result);
+  return D.42945;
+}
+
+
+typename std::_Miter_base<_Iterator>::iterator_type std::__miter_base(_Iterator) [with _Iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; typename std::_Miter_base<_Iterator>::iterator_type = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >] (struct __normal_iterator __it)
+{
+  struct iterator_type D.42950;
+
+  D.42950 = std::_Iter_base<__gnu_cxx::__normal_iterator<const int*, std::vector<int> >, false>::_S_base (__it);
+  return D.42950;
+}
+
+
+static std::_Iter_base<_Iterator, _HasBase>::iterator_type std::_Iter_base<_Iterator, _HasBase>::_S_base(_Iterator) [with _Iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; bool _HasBase = false; std::_Iter_base<_Iterator, _HasBase>::iterator_type = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >] (struct __normal_iterator __it)
+{
+  struct iterator_type D.42952;
+
+  D.42952 = __it;
+  return D.42952;
+}
+
+
+_OI std::__copy_move_a2(_II, _II, _OI) [with bool _IsMove = false; _II = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; _OI = int*] (struct __normal_iterator __first, struct __normal_iterator __last, int * __result)
+{
+  int * D.42954;
+  int * D.42955;
+  const int * D.42956;
+  const int * D.42957;
+
+  D.42955 = std::__niter_base<int*> (__result);
+  D.42956 = std::__niter_base<__gnu_cxx::__normal_iterator<const int*, std::vector<int> > > (__last);
+  D.42957 = std::__niter_base<__gnu_cxx::__normal_iterator<const int*, std::vector<int> > > (__first);
+  D.42954 = std::__copy_move_a<false, const int*, int*> (D.42957, D.42956, D.42955);
+  return D.42954;
+}
+
+
+typename std::_Niter_base<_Iterator>::iterator_type std::__niter_base(_Iterator) [with _Iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; typename std::_Niter_base<_Iterator>::iterator_type = const int*] (struct __normal_iterator __it)
+{
+  const int * D.42963;
+
+  D.42963 = std::_Iter_base<__gnu_cxx::__normal_iterator<const int*, std::vector<int> >, true>::_S_base (__it);
+  return D.42963;
+}
+
+
+static std::_Iter_base<_Iterator, true>::iterator_type std::_Iter_base<_Iterator, true>::_S_base(_Iterator) [with _Iterator = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >; std::_Iter_base<_Iterator, true>::iterator_type = const int*] (struct __normal_iterator __it)
+{
+  const int * D.42965;
+  const int * const & D.42966;
+
+  D.42966 = __gnu_cxx::__normal_iterator<const int*, std::vector<int> >::base (&__it);
+  D.42965 = *D.42966;
+  return D.42965;
+}
+
+
+const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const int*; _Container = std::vector<int>] (const struct __normal_iterator * const this)
+{
+  const int * const & D.42968;
+
+  try
+    {
+      D.42968 = &this->_M_current;
+      return D.42968;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+const VecSum<E1, E2> operator+(E1&, E2&) [with E1 = Vec; E2 = Vec] (struct Vec & u, struct Vec & v)
+{
+  const struct VecSum D.42970;
+  const struct VecSum D.40839;
+
+  VecSum<Vec, Vec>::VecSum (&D.40839, u, v);
+  try
+    {
+      D.42970 = D.40839;
+      return D.42970;
+    }
+  finally
+    {
+      D.40839 = {CLOBBER};
+    }
+}
+
+
+VecSum<E1, E2>::VecSum(E1&, E2&) [with E1 = Vec; E2 = Vec] (struct VecSum * const this, struct Vec & u, struct Vec & v)
+{
+  struct Vec & D.42973;
+  long unsigned int D.42974;
+  struct Vec & D.42975;
+  long unsigned int D.42976;
+
+  VecExpression<VecSum<Vec, Vec> >::VecExpression (this);
+  this->_u = u;
+  this->_v = v;
+  D.42973 = this->_u;
+  D.42974 = Vec::size (D.42973);
+  D.42975 = this->_v;
+  D.42976 = Vec::size (D.42975);
+  if (D.42974 != D.42976) goto <D.42977>; else goto <D.42978>;
+  <D.42977>:
+  __assert_fail ("_u.size() == _v.size()", "test.cc", 50, &__PRETTY_FUNCTION__);
+  <D.42978>:
+}
+
+
+constexpr VecExpression<VecSum<Vec, Vec> >::VecExpression() (struct VecExpression * const this)
+{
+
+}
+
+
+size_t Vec::size() (struct Vec * const this)
+{
+  size_t D.42979;
+  struct vector * D.42980;
+
+  D.42980 = &this->elements;
+  D.42979 = std::vector<int>::size (D.42980);
+  return D.42979;
+}
+
+
+const VecSum<E1, E2> operator+(E1&, E2&) [with E1 = const VecSum<Vec, Vec>; E2 = Vec] (const struct VecSum & u, struct Vec & v)
+{
+  const struct VecSum D.42982;
+  const struct VecSum D.40883;
+
+  VecSum<const VecSum<Vec, Vec>, Vec>::VecSum (&D.40883, u, v);
+  try
+    {
+      D.42982 = D.40883;
+      return D.42982;
+    }
+  finally
+    {
+      D.40883 = {CLOBBER};
+    }
+}
+
+
+VecSum<E1, E2>::VecSum(E1&, E2&) [with E1 = const VecSum<Vec, Vec>; E2 = Vec] (struct VecSum * const this, const struct VecSum & u, struct Vec & v)
+{
+  const struct VecSum & D.42985;
+  long unsigned int D.42986;
+  struct Vec & D.42987;
+  long unsigned int D.42988;
+
+  VecExpression<VecSum<const VecSum<Vec, Vec>, Vec> >::VecExpression (this);
+  this->_u = u;
+  this->_v = v;
+  D.42985 = this->_u;
+  D.42986 = VecSum<Vec, Vec>::size (D.42985);
+  D.42987 = this->_v;
+  D.42988 = Vec::size (D.42987);
+  if (D.42986 != D.42988) goto <D.42989>; else goto <D.42990>;
+  <D.42989>:
+  __assert_fail ("_u.size() == _v.size()", "test.cc", 50, &__PRETTY_FUNCTION__);
+  <D.42990>:
+}
+
+
+constexpr VecExpression<VecSum<const VecSum<Vec, Vec>, Vec> >::VecExpression() (struct VecExpression * const this)
+{
+
+}
+
+
+size_t VecSum<E1, E2>::size() const [with E1 = Vec; E2 = Vec; size_t = long unsigned int] (const struct VecSum * const this)
+{
+  size_t D.42991;
+  struct Vec & D.42992;
+
+  D.42992 = this->_u;
+  D.42991 = Vec::size (D.42992);
+  return D.42991;
+}
+
+
+Vec::Vec(const VecExpression<E>&) [with E = VecSum<const VecSum<Vec, Vec>, Vec>] (struct Vec * const this, const struct VecExpression & vec)
+{
+  struct allocator_type D.40892;
+  long unsigned int D.42994;
+  struct vector * D.42995;
+  long unsigned int D.42996;
+  bool retval.9;
+  long unsigned int D.42999;
+  struct vector * D.43001;
+  value_type & D.43002;
+  int D.43003;
+  struct vector * D.43004;
+
+  VecExpression<Vec>::VecExpression (this);
+  std::allocator<int>::allocator (&D.40892);
+  try
+    {
+      D.42994 = VecExpression<VecSum<const VecSum<Vec, Vec>, Vec> >::size (vec);
+      D.42995 = &this->elements;
+      std::vector<int>::vector (D.42995, D.42994, &D.40892);
+    }
+  finally
+    {
+      std::allocator<int>::~allocator (&D.40892);
+      D.40892 = {CLOBBER};
+    }
+  try
+    {
+      {
+        int a;
+
+        D.42996 = VecExpression<VecSum<const VecSum<Vec, Vec>, Vec> >::size (vec);
+        a = (int) D.42996;
+        {
+          size_t i;
+
+          i = 0;
+          <D.42997>:
+          D.42999 = VecExpression<VecSum<const VecSum<Vec, Vec>, Vec> >::size (vec);
+          retval.9 = D.42999 > i;
+          if (retval.9 != 0) goto <D.43000>; else goto <D.40895>;
+          <D.43000>:
+          D.43001 = &this->elements;
+          D.43002 = std::vector<int>::operator[] (D.43001, i);
+          D.43003 = VecExpression<VecSum<const VecSum<Vec, Vec>, Vec> >::operator[] (vec, i);
+          *D.43002 = D.43003;
+          i = i + 1;
+          goto <D.42997>;
+          <D.40895>:
+        }
+      }
+    }
+  catch
+    {
+      D.43004 = &this->elements;
+      std::vector<int>::~vector (D.43004);
+    }
+}
+
+
+std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<int>] (struct vector * const this, size_type __n, const struct allocator_type & __a)
+{
+  struct _Vector_base * D.43011;
+  struct _Vector_base * D.43012;
+
+  D.43011 = &this->D.39385;
+  std::_Vector_base<int, std::allocator<int> >::_Vector_base (D.43011, __n, __a);
+  try
+    {
+      std::vector<int>::_M_default_initialize (this, __n);
+    }
+  catch
+    {
+      D.43012 = &this->D.39385;
+      std::_Vector_base<int, std::allocator<int> >::~_Vector_base (D.43012);
+    }
+}
+
+
+void std::vector<_Tp, _Alloc>::_M_default_initialize(std::vector<_Tp, _Alloc>::size_type) [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::size_type = long unsigned int] (struct vector * const this, size_type __n)
+{
+  struct _Vector_base * D.43014;
+  struct _Tp_alloc_type & D.43015;
+  int * D.43016;
+  int * D.43017;
+
+  D.43014 = &this->D.39385;
+  D.43015 = std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator (D.43014);
+  D.43016 = this->D.39385._M_impl._M_start;
+  D.43017 = std::__uninitialized_default_n_a<int*, long unsigned int, int> (D.43016, __n, D.43015);
+  this->D.39385._M_impl._M_finish = D.43017;
+}
+
+
+_ForwardIterator std::__uninitialized_default_n_a(_ForwardIterator, _Size, std::allocator<_Tp>&) [with _ForwardIterator = int*; _Size = long unsigned int; _Tp = int] (int * __first, long unsigned int __n, struct allocator & D.41580)
+{
+  int * D.43019;
+
+  D.43019 = std::__uninitialized_default_n<int*, long unsigned int> (__first, __n);
+  return D.43019;
+}
+
+
+_ForwardIterator std::__uninitialized_default_n(_ForwardIterator, _Size) [with _ForwardIterator = int*; _Size = long unsigned int] (int * __first, long unsigned int __n)
+{
+  int * D.43022;
+  typedef _ValueType _ValueType;
+  const bool __assignable;
+
+  __assignable = 1;
+  D.43022 = std::__uninitialized_default_n_1<true>::__uninit_default_n<int*, long unsigned int> (__first, __n);
+  return D.43022;
+}
+
+
+static _ForwardIterator std::__uninitialized_default_n_1<true>::__uninit_default_n(_ForwardIterator, _Size) [with _ForwardIterator = int*; _Size = long unsigned int] (int * __first, long unsigned int __n)
+{
+  int * D.43025;
+  const int D.42534;
+  typedef _ValueType _ValueType;
+
+  D.42534 = 0;
+  try
+    {
+      D.43025 = std::fill_n<int*, long unsigned int, int> (__first, __n, &D.42534);
+      return D.43025;
+    }
+  finally
+    {
+      D.42534 = {CLOBBER};
+    }
+}
+
+
+_OI std::fill_n(_OI, _Size, const _Tp&) [with _OI = int*; _Size = long unsigned int; _Tp = int] (int * __first, long unsigned int __n, const int & __value)
+{
+  int * D.43030;
+  int * D.43031;
+
+  D.43031 = std::__niter_base<int*> (__first);
+  D.43030 = std::__fill_n_a<int*, long unsigned int, int> (D.43031, __n, __value);
+  return D.43030;
+}
+
+
+typename __gnu_cxx::__enable_if<std::__is_scalar<_Tp>::__value, _OutputIterator>::__type std::__fill_n_a(_OutputIterator, _Size, const _Tp&) [with _OutputIterator = int*; _Size = long unsigned int; _Tp = int; typename __gnu_cxx::__enable_if<std::__is_scalar<_Tp>::__value, _OutputIterator>::__type = int*] (int * __first, long unsigned int __n, const int & __value)
+{
+  int * D.43036;
+  const int __tmp;
+
+  __tmp = *__value;
+  {
+    long unsigned int __niter;
+
+    __niter = __n;
+    <D.43034>:
+    if (__niter == 0) goto <D.42627>; else goto <D.43035>;
+    <D.43035>:
+    *__first = __tmp;
+    __niter = __niter + 18446744073709551615;
+    __first = __first + 4;
+    goto <D.43034>;
+    <D.42627>:
+  }
+  D.43036 = __first;
+  return D.43036;
+}
+
+
+size_t VecExpression<E>::size() const [with E = VecSum<const VecSum<Vec, Vec>, Vec>; size_t = long unsigned int] (const struct VecExpression * const this)
+{
+  size_t D.43038;
+
+  D.43038 = VecSum<const VecSum<Vec, Vec>, Vec>::size (this);
+  return D.43038;
+}
+
+
+size_t VecSum<E1, E2>::size() const [with E1 = const VecSum<Vec, Vec>; E2 = Vec; size_t = long unsigned int] (const struct VecSum * const this)
+{
+  size_t D.43040;
+  const struct VecSum & D.43041;
+
+  D.43041 = this->_u;
+  D.43040 = VecSum<Vec, Vec>::size (D.43041);
+  return D.43040;
+}
+
+
+std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::reference = int&; std::vector<_Tp, _Alloc>::size_type = long unsigned int] (struct vector * const this, size_type __n)
+{
+  value_type & D.43043;
+  int * D.43044;
+  long unsigned int D.43045;
+
+  try
+    {
+      D.43044 = this->D.39385._M_impl._M_start;
+      D.43045 = __n * 4;
+      D.43043 = D.43044 + D.43045;
+      return D.43043;
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+int VecExpression<E>::operator[](size_t) const [with E = VecSum<const VecSum<Vec, Vec>, Vec>; size_t = long unsigned int] (const struct VecExpression * const this, size_t i)
+{
+  int D.43047;
+
+  D.43047 = VecSum<const VecSum<Vec, Vec>, Vec>::operator[] (this, i);
+  return D.43047;
+}
+
+
+int VecSum<E1, E2>::operator[](size_t) const [with E1 = const VecSum<Vec, Vec>; E2 = Vec; size_t = long unsigned int] (const struct VecSum * const this, size_t i)
+{
+  int D.43050;
+  const struct VecSum & D.43051;
+  int D.43052;
+  struct Vec & D.43053;
+  int D.43054;
+
+  D.43051 = this->_u;
+  D.43052 = VecSum<Vec, Vec>::operator[] (D.43051, i);
+  D.43053 = this->_v;
+  D.43054 = Vec::operator[] (D.43053, i);
+  D.43050 = D.43052 + D.43054;
+  return D.43050;
+}
+
+
+int VecSum<E1, E2>::operator[](size_t) const [with E1 = Vec; E2 = Vec; size_t = long unsigned int] (const struct VecSum * const this, size_t i)
+{
+  int D.43056;
+  struct Vec & D.43057;
+  int D.43058;
+  struct Vec & D.43059;
+  int D.43060;
+
+  D.43057 = this->_u;
+  D.43058 = Vec::operator[] (D.43057, i);
+  D.43059 = this->_v;
+  D.43060 = Vec::operator[] (D.43059, i);
+  D.43056 = D.43058 + D.43060;
+  return D.43056;
+}
+
+
+int Vec::operator[](size_t) (struct Vec * const this, size_t i)
+{
+  int D.43062;
+  struct vector * D.43063;
+  value_type & D.43064;
+
+  D.43063 = &this->elements;
+  D.43064 = std::vector<int>::operator[] (D.43063, i);
+  D.43062 = *D.43064;
+  return D.43062;
+}
+
+
+Vec::~Vec() (struct Vec * const this)
+{
+  struct vector * D.43066;
+
+  {
+    try
+      {
+        try
+          {
+
+          }
+        finally
+          {
+            D.43066 = &this->elements;
+            std::vector<int>::~vector (D.43066);
+          }
+      }
+    finally
+      {
+        MEM[(struct  &)this] = {CLOBBER};
+      }
+  }
+  <D.39596>:
+}
+
+
+std::vector<_Tp, _Alloc>::~vector() [with _Tp = int; _Alloc = std::allocator<int>] (struct vector * const this)
+{
+  struct _Vector_base * D.43067;
+  struct _Tp_alloc_type & D.43068;
+  int * D.43069;
+  int * D.43070;
+  struct _Vector_base * D.43071;
+
+  try
+    {
+      {
+        try
+          {
+            try
+              {
+                D.43067 = &this->D.39385;
+                D.43068 = std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator (D.43067);
+                D.43069 = this->D.39385._M_impl._M_finish;
+                D.43070 = this->D.39385._M_impl._M_start;
+                std::_Destroy<int*, int> (D.43070, D.43069, D.43068);
+              }
+            finally
+              {
+                D.43071 = &this->D.39385;
+                std::_Vector_base<int, std::allocator<int> >::~_Vector_base (D.43071);
+              }
+          }
+        finally
+          {
+            MEM[(struct  &)this] = {CLOBBER};
+          }
+      }
+      <D.40662>:
+    }
+  catch
+    {
+      <<<eh_must_not_throw (terminate)>>>
+    }
+}
+
+
+void std::_Destroy(_ForwardIterator, _ForwardIterator, std::allocator<_T2>&) [with _ForwardIterator = int*; _Tp = int] (int * __first, int * __last, struct allocator & D.40655)
+{
+  std::_Destroy<int*> (__first, __last);
+}
+
+
+void std::_Destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = int*] (int * __first, int * __last)
+{
+  typedef _Value_type _Value_type;
+
+  std::_Destroy_aux<true>::__destroy<int*> (__first, __last);
+}
+
+
+static void std::_Destroy_aux<true>::__destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = int*] (int * D.41553, int * D.41554)
+{
+  GIMPLE_NOP
+}
+
+
+void __static_initialization_and_destruction_0(int, int) (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.43072>; else goto <D.43073>;
+  <D.43072>:
+  if (__priority == 65535) goto <D.43074>; else goto <D.43075>;
+  <D.43074>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__comp_dtor , &__ioinit, &__dso_handle);
+  goto <D.43076>;
+  <D.43075>:
+  <D.43076>:
+  goto <D.43077>;
+  <D.43073>:
+  <D.43077>:
+}
+
+
+(static initializers for test.cc) ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

@@ -1,0 +1,34 @@
+int main() ()
+{
+  int D.2137;
+
+  {
+    struct Solution s;
+
+    try
+      {
+        s.a = 4;
+        Solution::operator[] (&s, 1);
+        D.2137 = 0;
+        return D.2137;
+      }
+    finally
+      {
+        s = {CLOBBER};
+      }
+  }
+  D.2137 = 0;
+  return D.2137;
+}
+
+
+bool Solution::operator[](int) const (const struct Solution * const this, int num)
+{
+  bool D.2140;
+
+  this->a = 2;
+  D.2140 = 0;
+  return D.2140;
+}
+
+

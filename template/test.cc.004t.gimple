@@ -1,0 +1,36 @@
+int main() ()
+{
+  int D.2181;
+
+  {
+    struct Container a;
+    struct Container b;
+
+    try
+      {
+        Container<2>::f (&a);
+        Container<3>::f (&b);
+      }
+    finally
+      {
+        a = {CLOBBER};
+        b = {CLOBBER};
+      }
+  }
+  D.2181 = 0;
+  return D.2181;
+}
+
+
+void Container<sz>::f() [with int sz = 2] (struct Container * const this)
+{
+  GIMPLE_NOP
+}
+
+
+void Container<sz>::f() [with int sz = 3] (struct Container * const this)
+{
+  GIMPLE_NOP
+}
+
+
